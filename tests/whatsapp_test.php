@@ -14,13 +14,13 @@ class local_whatsappgen_getusers_test extends advanced_testcase {
     public function test_userlist_with_valid_data() {
         global $DB;
 
-        // Simuliere die get_record-Methode.
+        // get the records from DB
         $DB->expects($this->once())
             ->method('get_record')
             ->with($this->equalTo('config'), $this->equalTo(['name' => 'local_whatsappgen_default_number']))
             ->willReturn((object) ['value' => 'phone2']);
 
-        // Simuliere die get_records_list-Methode.
+        
         $DB->expects($this->once())
             ->method('get_records_list')
             ->with($this->equalTo('user'), $this->equalTo('id'), $this->equalTo([1, 2]))
@@ -29,13 +29,13 @@ class local_whatsappgen_getusers_test extends advanced_testcase {
                 (object) ['id' => 2, 'phone2' => '', 'phone1' => '654321']
             ]);
 
-        // Erstelle eine Instanz der Whatsapp-Klasse.
+        // Get the class
         $whatsapp = new getusers($DB);
 
-        // Führe die userlist-Methode aus.
+        // Create values in userlist
         $result = $whatsapp->userlist('1,2');
 
-        // Überprüfe das Ergebnis.
+        // proof
         $this->assertCount(2, $result['userlist']);
         $this->assertEquals(1, $result['userlist'][1]->avail);
         $this->assertEquals('green', $result['userlist'][1]->fontcolor);
