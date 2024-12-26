@@ -17,7 +17,7 @@
 /**
  *  WhatsApp Message Generator
  *
- * @package    loca_whatsappgen
+ * @package    local_whatsappgen
  * @copyright  2024 Stephan Waetzig
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
@@ -25,8 +25,7 @@
 defined('MOODLE_INTERNAL') || die;
 
 $string['pluginname'] = 'Générateur WhatsApp';
-//$string['defaultapp'] = 'Utilisez l'application de bureau WhatsApp par défaut';
-//$string['defaultappdescription'] = 'Si coché, l'application de bureau WhatsApp est par défaut. Si décoché, WhatsApp Web est par défaut';
+$string['privacy:metadata'] = 'Ce plugin ne stocke aucune donnée personnelle.';
 $string['addwhatsapp'] = 'Ajouter un message WhatsApp';
 $string['error'] = 'Erreur fatale dans le générateur WhatsApp. Veuillez contacter l\'admin / le support';
 $string['whatsapp_messagetext'] = 'Le texte de votre message';
@@ -37,8 +36,8 @@ $string['limituser'] = 'Messages maximum générés en une fois';
 $string['limituserdescription'] = 'Veuillez choisir le nombre maximum de messages générés en une fois. Nous recommandons 10. Plus peut affecter les performances de votre ordinateur';
 $string['defaultnumber'] = 'Numéro WhatsApp par défaut';
 $string['defaultnumberdescription'] = 'Sélectionnez le champ par défaut pour le numéro WhatsApp dans le profil de l\'utilisateur.';
-$string['defaultdbtracking'] = 'Suivi dans la table de notifications de la base de données';
-$string['defaultdbtrackingdescription'] = 'Optionnellement, choisissez de suivre les messages générés dans la table des notifications.';
+$string['defaultdbtracking'] = 'Suivi dans la table de base de données whatsappgen_messages';
+$string['defaultdbtrackingdescription'] = 'Choisissez facultativement de suivre les messages générés dans whatsappgen_messages.';
 $string['defaultroles'] = 'Rôles autorisés';
 $string['defaultrolesdescription'] = 'Rôles autorisés à utiliser le plugin. Veuillez noter que ces rôles pourront voir les numéros de contact.';
 $string['limittext'] = 'Le nombre d\'utilisateurs sélectionnés dépasse la limite de ';

@@ -17,7 +17,7 @@
 /**
  *  WhatsApp Message Generator
  *
- * @package    loca_whatsappgen
+ * @package    local_whatsappgen
  * @copyright  2024 Stephan Waetzig
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
@@ -25,8 +25,7 @@
 defined('MOODLE_INTERNAL') || die;
 
 $string['pluginname'] = 'WhatsApp-generator';
-//$string['defaultapp'] = 'Gebruik WhatsApp Desktop Applicatie als standaard';
-//$string['defaultappdescription'] = 'Indien aangevinkt, is de WhatsApp Desktop-applicatie standaard. Indien niet aangevinkt, is WhatsApp Web standaard';
+$string['privacy:metadata'] = 'Deze plugin slaat geen persoonlijke gegevens op.';
 $string['addwhatsapp'] = 'WhatsApp-bericht toevoegen';
 $string['error'] = 'Fatale fout in WhatsApp-generator. Neem contact op met de admin/ondersteuning';
 $string['whatsapp_messagetext'] = 'Uw berichttekst';
@@ -37,8 +36,8 @@ $string['limituser'] = 'Maximaal gegenereerde berichten tegelijk';
 $string['limituserdescription'] = 'Kies het maximale aantal berichten dat tegelijk wordt gegenereerd. Wij raden 10 aan. Meer kan de prestaties van uw computer beïnvloeden';
 $string['defaultnumber'] = 'Standaard WhatsApp-nummer';
 $string['defaultnumberdescription'] = 'Kies het standaardveld voor het WhatsApp-nummer in het gebruikersprofiel.';
-$string['defaultdbtracking'] = 'Tracking in Database tabel Meldingen';
-$string['defaultdbtrackingdescription'] = 'Optioneel, kies om gegenereerde berichten te volgen in de meldingen tabel.';
+$string['defaultdbtracking'] = 'Tracking in de databastabel whatsappgen_messages';
+$string['defaultdbtrackingdescription'] = 'Optioneel selecteren om gegenereerde berichten bij te houden in whatsappgen_messages.';
 $string['defaultroles'] = 'Toegestane Rollen';
 $string['defaultrolesdescription'] = 'Rollen die de plugin mogen gebruiken. Houd er rekening mee dat deze rollen de contactnummers kunnen zien.';
 $string['limittext'] = 'Het aantal geselecteerde gebruikers overschrijdt de limiet van ';

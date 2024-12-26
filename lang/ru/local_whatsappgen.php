@@ -17,7 +17,7 @@
 /**
  *  WhatsApp Message Generator
  *
- * @package    loca_whatsappgen
+ * @package    local_whatsappgen
  * @copyright  2024 Stephan Waetzig
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
@@ -25,8 +25,7 @@
 defined('MOODLE_INTERNAL') || die;
 
 $string['pluginname'] = 'Генератор WhatsApp';
-//$string['defaultapp'] = 'Использовать приложение WhatsApp Desktop по умолчанию';
-//$string['defaultappdescription'] = 'Если отмечено, приложение WhatsApp Desktop используется по умолчанию. Если не отмечено, используется WhatsApp Web';
+$string['privacy:metadata'] = 'Этот плагин не хранит персональные данные.';
 $string['addwhatsapp'] = 'Добавить сообщение WhatsApp';
 $string['error'] = 'Фатальная ошибка в генераторе WhatsApp. Пожалуйста, свяжитесь с администратором/поддержкой';
 $string['whatsapp_messagetext'] = 'Текст вашего сообщения';
@@ -37,8 +36,8 @@ $string['limituser'] = 'Максимальное количество сообщ
 $string['limituserdescription'] = 'Пожалуйста, выберите максимальное количество сообщений, создаваемых за раз. Мы рекомендуем 10. Большее количество может повлиять на производительность вашего компьютера';
 $string['defaultnumber'] = 'Номер WhatsApp по умолчанию';
 $string['defaultnumberdescription'] = 'Выберите поле по умолчанию для номера WhatsApp в профиле пользователя.';
-$string['defaultdbtracking'] = 'Отслеживание в таблице уведомлений базы данных';
-$string['defaultdbtrackingdescription'] = 'При необходимости выберите отслеживание создаваемых сообщений в таблице уведомлений.';
+$string['defaultdbtracking'] = 'Отслеживание в таблице базы данных whatsappgen_messages';
+$string['defaultdbtrackingdescription'] = 'Опционально выберите для отслеживания созданных сообщений в whatsappgen_messages.';
 $string['defaultroles'] = 'Разрешенные роли';
 $string['defaultrolesdescription'] = 'Роли, которым разрешено использовать плагин. Обратите внимание, что эти роли смогут видеть контактные номера.';
 $string['limittext'] = 'Количество выбранных пользователей превышает лимит в ';

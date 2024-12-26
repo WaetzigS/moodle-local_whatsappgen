@@ -1,11 +1,48 @@
 <?php
+// This file is part of Moodle - http://moodle.org/
+//
+// Moodle is free software: you can redistribute it and/or modify
+// it under the terms of the GNU General Public License as published by
+// the Free Software Foundation, either version 3 of the License, or
+// (at your option) any later version.
+//
+// Moodle is distributed in the hope that it will be useful,
+// but WITHOUT ANY WARRANTY; without even the implied warranty of
+// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+// GNU General Public License for more details.
+//
+// You should have received a copy of the GNU General Public License
+// along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
+
+/**
+ *  WhatsApp Message Generator
+ *
+ * @package    local_whatsappgen
+ * @copyright  2024 Stephan Waetzig
+ * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
+ */
 
 require_once('../../config.php');
-require_once($CFG->libdir . '/formslib.php');
-require_once($CFG->dirroot . '/local/whatsappgen/classes/whatsapp.php');
-require_once($CFG->libdir . '/pagelib.php');
 
-require_login();
+use local_whatsappgen\whatsapp_message;
+use local_whatsappgen\getusers;
+
+
+//Proof if user is availble to use whatsapp gen again, bs with link he could use it
+global $USER;
+$courseidforproof = optional_param('courseid', '', PARAM_RAW);
+$setroles = explode(',' , get_config('localwhatsappgen' , 'defaultroles'));
+$context = context_course::instance($courseidforproof);
+$roles = get_user_roles($context, $USER->id, true);
+foreach ($roles as $role) {
+    if (in_array($role->roleid , $setroles)) {
+        break; 
+    } else {
+        redirect($CFG->wwwroot , get_string('error', 'local_whatsappgen'), null, \core\output\notification::NOTIFY_ERROR);
+    }
+}
+
+
 
 class whatsapp {
     function instance_allow_multiple() {
@@ -20,6 +57,8 @@ class whatsapp {
     public function get_content() {
         global $CFG, $DB, $userids, $courseid, $PAGE, $OUTPUT, $mform;
 
+        
+
         $userids = optional_param('userid', '', PARAM_RAW);
         $courseid = optional_param('courseid', '', PARAM_RAW);
       
@@ -27,16 +66,14 @@ class whatsapp {
         $PAGE->set_context(\context_system::instance());
         $PAGE->set_title(get_string('pluginname', 'local_whatsappgen'));
         $PAGE->set_pagelayout('standard');
-        //$PAGE->set_heading(get_string('create_message', 'local_whatsappgen'));
-        $PAGE->set_cacheable(true);
 
         //Check, if you are over the limit, if not then continue
-        $setting_local_whatsapp_limit = $DB->get_record('config', ['name' => 'local_whatsappgen_limituser']);
+        $setting_local_whatsapp_limit = get_config('localwhatsappgen' , 'limituser');
         $userid_limitcheck = explode(',', $userids);
 
-        if (count($userid_limitcheck) > intval($setting_local_whatsapp_limit->value)) {
+        if (count($userid_limitcheck) > intval($setting_local_whatsapp_limit)) {
             
-            redirect($CFG->wwwroot . '/user/index.php?id=' . $courseid, get_string('limittext', 'local_whatsappgen') . $setting_local_whatsapp_limit->value, null, \core\output\notification::NOTIFY_WARNING);
+            redirect($CFG->wwwroot . '/user/index.php?id=' . $courseid, get_string('limittext', 'local_whatsappgen') . $setting_local_whatsapp_limit, null, \core\output\notification::NOTIFY_WARNING);
             die();
         } else {
             
@@ -45,7 +82,7 @@ class whatsapp {
             $usernameslist = $userlistclass->userlist($userids);
 
             //Get Data from user out of the function userlist and get the phonenumbers
-            $setting_defaultnumber = $DB->get_record('config', ['name' => 'local_whatsappgen_default_number']);
+            $setting_defaultnumber =  get_config('localwhatsappgen' , 'ddefaultnumber');
 
             //Get the forms
             $mform = new whatsapp_message();
@@ -55,7 +92,7 @@ class whatsapp {
                     redirect($CFG->wwwroot . '/user/index.php?id=' . $courseid , get_string('cancelmessage', 'local_whatsappgen'), null, \core\output\notification::NOTIFY_INFO);
                     die();
             } else if ($data = $mform->get_data()) {
-                global $CFG , $DB , $USER;
+                global $CFG , $DB , $USER , $PAGE;
 
                 // For Database entry
                 $messaginguser = $USER->id;
@@ -63,53 +100,40 @@ class whatsapp {
                 //get course id 
                 $courseid_fromform = $data->courseid;
 
-                // Get all the values from one query
-                $userdata = $DB->get_records_sql(
-                    'SELECT 
-                        us.id as id ,
-                        us.firstname as firstname , 
-                        us.lastname as lastname ,
-                        us.phone1 as phone1 ,
-                        us.phone2 as phone2 ,
-                        us.email as email ,
-                        us.country as country , 
-                        (SELECT group_concat(grou.name) 
-                         	FROM mdl_groups grou 
-                         	JOIN mdl_groups_members member ON member.userid = us.id AND member.groupid = grou.id
-                         WHERE
-                         	grou.id = member.groupid AND
-                         	member.userid = us.id AND
-                         	grou.courseid = :courseid
-                        ) as groupname
-                    FROM
-                        {user} us 
+                //Get the comma sperated userids in a array
+                $userids = explode(',', $data->userid); 
+                //make them to a list
+                list($sql_condition, $sql_params_in) = $DB->get_in_or_equal($userids, SQL_PARAMS_NAMED, 'userid');
 
-                    WHERE
-                        us.id IN ( ' . $data->userid .  ' )' , 
-                        [
-                            'courseid' => $courseid_fromform , 
-                        ]
-                );
-
+                // create the query -> groups we make it in the foreach
+                $sql = 'SELECT us.id AS id , 
+                               us.firstname AS firstname , 
+                               us.lastname AS lastname ,
+                               us.phone1 AS phone1 ,
+                               us.phone2 AS phone2 ,
+                               us.email AS email ,
+                               us.country AS country 
+                        FROM {user} us 
+                        WHERE us.id ' . $sql_condition;
+                
+                $userdata = $DB->get_records_sql($sql, $sql_params_in);
                 
                 //Get setting Tracking in DB
                 $setting_dbtracking = '';
-                $setting_dbtracking = $DB->get_record('config', ['name' => 'local_whatsappgen_trackingdb']);
-                $setting_dbtracking = intval($setting_dbtracking->value);
+                $setting_dbtracking = get_config('localwhatsappgen' , 'trackingdb');
+                $setting_dbtracking = intval($setting_dbtracking);
 
                 //Get the message text --> make an /n, bcs that  solves the linebreak-problem
                 $whatsapp_message = nl2br(htmlspecialchars($data->whatsapp_messagetext));
-
-                //clear the javascript chache
-                $CFG->cachejs = false;
                 
                 //Import the country codes from ym json
                 $country_json = 'phonecountry.json';
                 $json_content = file_get_contents($country_json);
                 $country_codes = json_decode($json_content, true);
 
+                $collectDataforjs = [];
+
                 //Now render it all
-                echo '<script>';
                 foreach($userdata as $waaccount) {
                                     
                     //Get Text
@@ -130,9 +154,27 @@ class whatsapp {
                     }
 
                     if (strpos($formattedText , '%%groupname%%') !== false) {
-                        $formattedText = str_replace('%%groupname%%', $waaccount->groupname, $formattedText);
-                    }
+                        //Get the groups of the user
+                        $groupnames = $DB->get_records_sql(
+                            'SELECT grou.name as groupname
+                            FROM {groups} grou
+                                JOIN {groups_members} members ON grou.id = members.groupid
+                            WHERE members.userid = ?' ,
+                            [
+                                $waaccount->id ,
+                            ]
+                        );
+                        $groupnamesarray = [];
+                        foreach($groupnames as $record) {
+                            $groupnamesarray[] = $record->groupname;
+                        };
+                        
+                        // Make groupname to string
+                        $groupnamesstring = implode(', ', $groupnamesarray);
 
+                        $formattedText = str_replace('%%groupname%%', $groupnamesstring, $formattedText);
+                    }
+                
                     if (strpos($formattedText , '%%coursefullname%%') !== false) {
                         $coursefullname = $DB->get_record('course', ['id' => $courseid_fromform])->fullname;
                         $formattedText = str_replace('%%coursefullname%%', $coursefullname , $formattedText);
@@ -143,15 +185,13 @@ class whatsapp {
                         $formattedText = str_replace('%%courseshortname%%', $courseshortname , $formattedText);
                     }
                                       
-                    // Replace <br /> with a new line character
+                    // Replace <br /> with a new line character -> the text will be encoded in js 
                     $formattedText = str_replace("<br />", "\n", $formattedText);
                     
-                    // Encode text, thats like Mailto
-                    $encodedText = urlencode($formattedText);
                     
                     // Get Telephone or Smartphonenumber from settings
                     $phonenumerunformat = '';
-                    if ($setting_defaultnumber->value === 'phone2') {
+                    if ($setting_defaultnumber === 'phone2') {
                         $phonenumerunformat = $waaccount->phone2;
                     } else {
                         $phonenumerunformat = $waaccount->phone1;
@@ -168,36 +208,37 @@ class whatsapp {
                             }
                         }
                     }
-                          
+                    
                     //Proof, if user has nuumber and create message
                     if (!empty($phonenumber)) {
-                        // Create the WhatsApp URL
-                        $url = 'https://wa.me/' . $phonenumber . '?text=' . $encodedText;
-                        // Output JavaScript code to open the link in a new tab
-                        echo 'window.open("' . $url . '", "_blank");';
+                        // Hier jetzt die create js mit den inits aufrufen
+                        
+                        $collectDataforjs[] = [
+                            'phonenumber' => $phonenumber,
+                            'text' => $formattedText
+                        ];
+                        
+  
                     }
-
-                    //Insert in notification
+                    //Insert in generated WhatsApp messages
                     if ($setting_dbtracking > 0) {
-                        $insert_notification = new stdClass();
-                        $insert_notification->useridfrom = $messaginguser;
-                        $insert_notification->useridto = $waaccount->id;
-                        $insert_notification->fullmessage = $formattedText;
-                        $insert_notification->component = 'local_whatsappgen';
-                        $insert_notification->contexturl = $CFG->wwwroot . '/user/index.php?id=' . $courseid_fromform;
-                        $insert_notification->timecreated = time();
-                        $insert_notification->customdata = '["phone"."' . $setting_defaultnumber->value . '"]';
+                        $insert_tracking = new stdClass();
+                        $insert_tracking->useridfrom = $messaginguser;
+                        $insert_tracking->course = $courseid_fromform;
+                        $insert_tracking->useridto = $waaccount->id;
+                        $insert_tracking->message = $formattedText;
+                        $insert_tracking->timecreated = time();
                         try {
-                            $DB->insert_record('notifications' , $insert_notification , false);
+                            $DB->insert_record('whatsappgen_messages' , $insert_tracking , false);
                         } catch (dml_exception $e) {
                         }
                     }
-
                 }
+
+                //Out of foreach -> I want to go to js and create the messages there
+                $PAGE->requires->js_call_amd("local_whatsappgen/create", 'init', [$collectDataforjs]);
+                $PAGE->requires->js_init_code('window.location.href = "' . $CFG->wwwroot . '/user/index.php?id=' . $courseid . '";');
                 
-                // Add a delay before redirecting
-                echo 'setTimeout(function() { window.location.href = "' . htmlspecialchars($CFG->wwwroot . '/user/index.php?id=' . $courseid_fromform, ENT_QUOTES, 'UTF-8') . '"; }, 2000);';
-                echo '</script>';
             }
 
             //Bring Values into the mustache-file
@@ -234,4 +275,5 @@ $content = $whatsapp->get_content();
 
 echo $OUTPUT->header();
 echo $content->text;
+echo $OUTPUT->footer();
 

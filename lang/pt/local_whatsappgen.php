@@ -17,7 +17,7 @@
 /**
  *  WhatsApp Message Generator
  *
- * @package    loca_whatsappgen
+ * @package    local_whatsappgen
  * @copyright  2024 Stephan Waetzig
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
@@ -25,8 +25,7 @@
 defined('MOODLE_INTERNAL') || die;
 
 $string['pluginname'] = 'Gerador de WhatsApp';
-//$string['defaultapp'] = 'Usar a aplicação de ambiente de trabalho WhatsApp como predefinição';
-//$string['defaultappdescription'] = 'Se marcado, a aplicação de ambiente de trabalho WhatsApp será a predefinição. Se não for marcado, o WhatsApp Web será a predefinição';
+$string['privacy:metadata'] = 'Este plugin não armazena dados pessoais.';
 $string['addwhatsapp'] = 'Adicionar mensagem WhatsApp';
 $string['error'] = 'Erro fatal no gerador de WhatsApp. Por favor, contacte o administrador/suporte';
 $string['whatsapp_messagetext'] = 'O texto da sua mensagem';

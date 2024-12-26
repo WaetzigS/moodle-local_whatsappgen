@@ -17,7 +17,7 @@
 /**
  *  WhatsApp Message Generator
  *
- * @package    loca_whatsappgen
+ * @package    local_whatsappgen
  * @copyright  2024 Stephan Waetzig
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
@@ -25,8 +25,7 @@
 defined('MOODLE_INTERNAL') || die;
 
 $string['pluginname'] = 'WhatsApp Generator';
-//$string['defaultapp'] = 'Brug WhatsApp Desktop-applikation som standard';
-//$string['defaultappdescription'] = 'Hvis markeret, er WhatsApp Desktop-applikationen standard. Hvis ikke markeret, er WhatsApp Web standard';
+$string['privacy:metadata'] = 'Denne plugin gemmer ikke nogen personlige data.';
 $string['addwhatsapp'] = 'Tilføj WhatsApp-besked';
 $string['error'] = 'Fatal fejl i WhatsApp-generatoren. Kontakt venligst admin/support';
 $string['whatsapp_messagetext'] = 'Din beskedtekst';
@@ -37,8 +36,8 @@ $string['limituser'] = 'Maksimalt genererede beskeder ad gangen';
 $string['limituserdescription'] = 'Vælg venligst det maksimale antal genererede beskeder ad gangen. Vi anbefaler 10. Flere kan påvirke din computers ydeevne';
 $string['defaultnumber'] = 'Standard WhatsApp-nummer';
 $string['defaultnumberdescription'] = 'Vælg standardfeltet for WhatsApp-nummer i brugerprofilen.';
-$string['defaultdbtracking'] = 'Sporing i databasen tabel Notifikationer';
-$string['defaultdbtrackingdescription'] = 'Valgfrit, vælg at spore genererede beskeder i notifikationstabellen.';
+$string['defaultdbtracking'] = 'Sporing i databastabellen whatsappgen_messages';
+$string['defaultdbtrackingdescription'] = 'Valgfrit vælg at spore genererede beskeder i whatsappgen_messages.';
 $string['defaultroles'] = 'Tilladte roller';
 $string['defaultrolesdescription'] = 'Roller, der har tilladelse til at bruge pluginet. Bemærk venligst, at disse roller kan se kontaktoplysninger.';
 $string['limittext'] = 'Antallet af valgte brugere overskrider grænsen på ';

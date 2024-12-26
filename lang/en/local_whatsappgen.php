@@ -17,7 +17,7 @@
 /**
  *  WhatsApp Message Generator
  *
- * @package    loca_whatsappgen
+ * @package    local_whatsappgen
  * @copyright  2024 Stephan Waetzig
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
@@ -25,8 +25,7 @@
 defined('MOODLE_INTERNAL') || die;
 
 $string['pluginname'] = 'WhatsApp Generator';
-//$string['defaultapp'] = 'Use Whatsapp Desktop Application as default';
-//$string['defaultappdescription'] = 'If check, then WhatsApp Desktop application is default. If unchecked, so WhatsApp Web is default';
+$string['privacy:metadata'] = 'This plugin does not store any personal data.';
 $string['addwhatsapp'] = 'Add WhatsApp Message';
 $string['error'] = 'Fatal error in WhatsApp generator. Please contact the admin / support';
 $string['whatsapp_messagetext'] = 'Your message text';
@@ -37,7 +36,7 @@ $string['limituser'] = 'Maximum generated messages at once';
 $string['limituserdescription'] = 'Please choose the maximum generated messages at one time. We require 10. More can effect your Computer performance';
 $string['defaultnumber'] = 'Default WhatsApp Number';
 $string['defaultnumberdescription'] = 'Select the default field for the WhatsApp number in the user profile.';
-$string['defaultdbtracking'] = 'Tracking in Database table Notifications';
+$string['defaultdbtracking'] = 'Tracking in Database table whatsappgen_messages';
 $string['defaultdbtrackingdescription'] = 'Optionally, select to track generated messages in the notifications table.';
 $string['defaultroles'] = 'Allowed Roles';
 $string['defaultrolesdescription'] = 'Roles allowed to use the plugin. Please note that these roles will be able to see the contact numbers.';
@@ -59,7 +58,7 @@ $string['tfstrikethrough'] = '~Text~ &rarr; score out: ';
 $string['tfmonospace'] = '```Text``` &rarr; into monospace format: ';
 $string['licenceinfo'] = 'Conditions';
 $string['licenceinfodescription'] = 'I undersatand, the author of this plugin assumes no responsibility for any legal infringements. Please adhere to WhatsApp licensing terms.<br>Please check the <a href="https://www.whatsapp.com/legal" target="_blank">legal of Whatsapp</a>';
-
+$string['linktracker'] = '<a href="tracker.php">Hier gehts zur Übersaicht generierten Nachrichten</a>';
 
 
 

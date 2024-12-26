@@ -17,7 +17,7 @@
 /**
  *  WhatsApp Message Generator
  *
- * @package    loca_whatsappgen
+ * @package    local_whatsappgen
  * @copyright  2024 Stephan Waetzig
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
@@ -25,8 +25,7 @@
 defined('MOODLE_INTERNAL') || die;
 
 $string['pluginname'] = 'WhatsApp Generatoru';
-//$string['defaultapp'] = 'WhatsApp Desktop Proqramını standart olaraq istifadə edin';
-//$string['defaultappdescription'] = 'Əgər seçilibsə, WhatsApp Desktop proqramı standartdır. Əgər seçilməyibsə, WhatsApp Web standartdır';
+$string['privacy:metadata'] = 'Bu plugin şəxsi məlumatları saxlamır.';
 $string['addwhatsapp'] = 'WhatsApp Mesajı Əlavə et';
 $string['error'] = 'WhatsApp Generatorunda fatal səhv. Zəhmət olmasa admin ilə əlaqə saxlayın';
 $string['whatsapp_messagetext'] = 'Mesaj mətniniz';
@@ -37,8 +36,8 @@ $string['limituser'] = 'Eyni anda yaradılan maksimal mesaj sayı';
 $string['limituserdescription'] = 'Zəhmət olmasa, eyni anda yaradılan maksimal mesaj sayını seçin. Biz 10 tövsiyə edirik. Daha çox say kompüterinizin performansını təsir edə bilər';
 $string['defaultnumber'] = 'Standart WhatsApp Nömrəsi';
 $string['defaultnumberdescription'] = 'İstifadəçi profilində WhatsApp nömrəsi üçün standart sahəni seçin.';
-$string['defaultdbtracking'] = 'Bildirişlər cədvəlində izləmə';
-$string['defaultdbtrackingdescription'] = 'Seçim olaraq, yaradılan mesajları bildirişlər cədvəlində izləmək üçün seçin.';
+$string['defaultdbtracking'] = 'whatsappgen_messages verilənlər bazası cədvəlində izlənilməsi';
+$string['defaultdbtrackingdescription'] = 'Yaradılmış mesajları whatsappgen_messages-də izləmək üçün isteğe bağlı seçim.';
 $string['defaultroles'] = 'İcazəli Rollar';
 $string['defaultrolesdescription'] = 'Plugin istifadə etmək üçün icazəli rollar. Qeyd edək ki, bu rollar kontakt nömrələrini görə biləcəklər.';
 $string['limittext'] = 'Seçilən istifadəçilərin sayı limitdən artıqdır ';

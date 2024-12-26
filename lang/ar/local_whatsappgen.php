@@ -17,7 +17,7 @@
 /**
  *  WhatsApp Message Generator
  *
- * @package    loca_whatsappgen
+ * @package    local_whatsappgen
  * @copyright  2024 Stephan Waetzig
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
@@ -25,8 +25,7 @@
 defined('MOODLE_INTERNAL') || die;
 
 $string['pluginname'] = 'مولد واتساب';
-//$string['defaultapp'] = 'استخدم تطبيق واتساب لسطح المكتب كإعداد افتراضي';
-//$string['defaultappdescription'] = 'إذا تم تحديد هذا الخيار، فإن تطبيق واتساب لسطح المكتب سيكون الإعداد الافتراضي. إذا لم يتم تحديده، فإن واتساب ويب سيكون الإعداد الافتراضي';
+$string['privacy:metadata'] = 'هذا المكون الإضافي لا يخزن أي بيانات شخصية.';
 $string['addwhatsapp'] = 'إضافة رسالة واتساب';
 $string['error'] = 'خطأ فادح في مولد واتساب. يرجى الاتصال بالدعم الفني';
 $string['whatsapp_messagetext'] = 'نص رسالتك';
@@ -37,8 +36,8 @@ $string['limituser'] = 'الحد الأقصى للرسائل المولدة مر
 $string['limituserdescription'] = 'يرجى اختيار الحد الأقصى للرسائل المولدة في وقت واحد. نحن نوصي بـ 10. يمكن أن يؤثر العدد الأكبر على أداء جهاز الكمبيوتر الخاص بك';
 $string['defaultnumber'] = 'رقم واتساب الافتراضي';
 $string['defaultnumberdescription'] = 'اختر الحقل الافتراضي لرقم واتساب في الملف الشخصي للمستخدم.';
-$string['defaultdbtracking'] = 'تتبع في جدول الإشعارات في قاعدة البيانات';
-$string['defaultdbtrackingdescription'] = 'اختياري، حدد لتتبع الرسائل المولدة في جدول الإشعارات.';
+$string['defaultdbtracking'] = 'التتبع في جدول قاعدة البيانات whatsappgen_messages';
+$string['defaultdbtrackingdescription'] = 'اختيارياً، اختر لتتبع الرسائل المولدة في whatsappgen_messages.';
 $string['defaultroles'] = 'الأدوار المسموح بها';
 $string['defaultrolesdescription'] = 'الأدوار المسموح لها باستخدام الإضافة. يرجى ملاحظة أن هذه الأدوار ستتمكن من رؤية أرقام الاتصال.';
 $string['limittext'] = 'عدد المستخدمين المحددين يتجاوز الحد المسموح به وهو ';

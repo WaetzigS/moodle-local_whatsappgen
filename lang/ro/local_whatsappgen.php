@@ -17,7 +17,7 @@
 /**
  *  WhatsApp Message Generator
  *
- * @package    loca_whatsappgen
+ * @package    local_whatsappgen
  * @copyright  2024 Stephan Waetzig
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
@@ -25,8 +25,7 @@
 defined('MOODLE_INTERNAL') || die;
 
 $string['pluginname'] = 'Generator WhatsApp';
-//$string['defaultapp'] = 'Utilizați aplicația de desktop WhatsApp ca implicită';
-//$string['defaultappdescription'] = 'Dacă este bifat, aplicația de desktop WhatsApp este implicită. Dacă nu este bifat, WhatsApp Web este implicit';
+$string['privacy:metadata'] = 'Acest plugin nu stochează date personale.';
 $string['addwhatsapp'] = 'Adăugați mesaj WhatsApp';
 $string['error'] = 'Eroare fatală în generatorul WhatsApp. Vă rugăm să contactați administratorul/suportul';
 $string['whatsapp_messagetext'] = 'Textul mesajului dvs.';
@@ -37,8 +36,8 @@ $string['limituser'] = 'Mesaje generate maxim simultan';
 $string['limituserdescription'] = 'Vă rugăm să alegeți numărul maxim de mesaje generate simultan. Recomandăm 10. Mai multe pot afecta performanța computerului dvs.';
 $string['defaultnumber'] = 'Număr WhatsApp implicit';
 $string['defaultnumberdescription'] = 'Selectați câmpul implicit pentru numărul WhatsApp în profilul utilizatorului.';
-$string['defaultdbtracking'] = 'Urmărire în tabelul de notificări al bazei de date';
-$string['defaultdbtrackingdescription'] = 'Opțional, alegeți să urmăriți mesajele generate în tabelul de notificări.';
+$string['defaultdbtracking'] = 'Urmărire în tabelul bazei de date whatsappgen_messages';
+$string['defaultdbtrackingdescription'] = 'Opțional alegeți să urmăriți mesajele generate în whatsappgen_messages.';
 $string['defaultroles'] = 'Roluri permise';
 $string['defaultrolesdescription'] = 'Roluri permise să utilizeze pluginul. Vă rugăm să rețineți că aceste roluri vor putea vedea numerele de contact.';
 $string['limittext'] = 'Numărul de utilizatori selectați depășește limita de ';

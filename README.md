@@ -11,6 +11,9 @@ The following git branches are supported:
 |-----------------------|-------------------|
 | Moodle 4.0            | MOODLE_400_STABLE |
 | Moodle 4.1            | MOODLE_401_STABLE |
+| Moodle 4.2            | MOODLE_402_STABLE |
+| Moodle 4.3            | MOODLE_403_STABLE |
+| Moodle 4.4            | MOODLE_404_STABLE |
 
 
 # PURPOSE
@@ -78,8 +81,8 @@ Please select the user field where you save the WhatsApp numbers. You can save t
 3. Allow Roles
 Here, you can set the default roles that are allowed to use this plugin and create messages. Please note that after the creation, the number of participants will be displayed.
 
-4. Tracking in Notifications
-You can set up database tracking in the notifications table here. This allows you to see which users created messages for which participants. Please note that creating a message does not guarantee it is sent. It's possible that the WhatsApp number is invalid or not available in the system.
+4. Tracking in whatsappgen_messages
+You can set up database tracking in the whatsappgen_messages table here. This allows you to see which users created messages for which participants. Please note that creating a message does not guarantee it is sent. It's possible that the WhatsApp number is invalid or not available in the system.
 
 # FAQ
 

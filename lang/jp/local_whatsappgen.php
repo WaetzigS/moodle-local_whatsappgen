@@ -17,7 +17,7 @@
 /**
  *  WhatsApp Message Generator
  *
- * @package    loca_whatsappgen
+ * @package    local_whatsappgen
  * @copyright  2024 Stephan Waetzig
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
@@ -25,8 +25,7 @@
 defined('MOODLE_INTERNAL') || die;
 
 $string['pluginname'] = 'WhatsAppジェネレーター';
-//$string['defaultapp'] = 'デフォルトとしてWhatsAppデスクトップアプリケーションを使用する';
-//$string['defaultappdescription'] = 'チェックされた場合、デフォルトはWhatsAppデスクトップアプリケーションです。チェックされていない場合、デフォルトはWhatsApp Webです';
+$string['privacy:metadata'] = 'このプラグインは個人情報を保存しません。';
 $string['addwhatsapp'] = 'WhatsAppメッセージを追加';
 $string['error'] = 'WhatsAppジェネレーターの致命的なエラーです。管理者/サポートに連絡してください';
 $string['whatsapp_messagetext'] = 'メッセージのテキスト';
@@ -37,8 +36,8 @@ $string['limituser'] = '一度に生成される最大メッセージ数';
 $string['limituserdescription'] = '一度に生成される最大メッセージ数を選択してください。10を推奨します。これ以上はコンピュータのパフォーマンスに影響を与える可能性があります';
 $string['defaultnumber'] = 'デフォルトのWhatsApp番号';
 $string['defaultnumberdescription'] = 'ユーザープロファイルのWhatsApp番号のデフォルトフィールドを選択します。';
-$string['defaultdbtracking'] = 'データベース通知テーブルでのトラッキング';
-$string['defaultdbtrackingdescription'] = 'オプションで、通知テーブルで生成されたメッセージをトラッキングするよう選択します。';
+$string['defaultdbtracking'] = 'データベーステーブルwhatsappgen_messagesでの追跡';
+$string['defaultdbtrackingdescription'] = 'オプションで、生成されたメッセージをwhatsappgen_messagesで追跡します。';
 $string['defaultroles'] = '許可された役割';
 $string['defaultrolesdescription'] = 'プラグインの使用を許可された役割。これらの役割は連絡先番号を表示できることに注意してください。';
 $string['limittext'] = '選択されたユーザーの数が制限を超えています ';

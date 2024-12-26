@@ -17,7 +17,7 @@
 /**
  *  WhatsApp Message Generator
  *
- * @package    loca_whatsappgen
+ * @package    local_whatsappgen
  * @copyright  2024 Stephan Waetzig
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
@@ -25,8 +25,7 @@
 defined('MOODLE_INTERNAL') || die;
 
 $string['pluginname'] = 'WhatsApp Oluşturucu';
-//$string['defaultapp'] = 'Varsayılan olarak WhatsApp Masaüstü Uygulamasını kullan';
-//$string['defaultappdescription'] = 'Eğer işaretliyse, varsayılan WhatsApp Masaüstü uygulamasıdır. İşaretli değilse, varsayılan WhatsApp Web\'dir';
+$string['privacy:metadata'] = 'Bu eklenti herhangi bir kişisel veri depolamaz.';
 $string['addwhatsapp'] = 'WhatsApp Mesajı Ekle';
 $string['error'] = 'WhatsApp oluşturucusunda ölümcül hata. Lütfen yönetici/destek ile iletişime geçin';
 $string['whatsapp_messagetext'] = 'Mesajınızın metni';
@@ -37,8 +36,8 @@ $string['limituser'] = 'Aynı anda oluşturulabilecek maksimum mesaj sayısı';
 $string['limituserdescription'] = 'Lütfen aynı anda oluşturulabilecek maksimum mesaj sayısını seçin. 10 öneriyoruz. Daha fazlası bilgisayarınızın performansını etkileyebilir';
 $string['defaultnumber'] = 'Varsayılan WhatsApp Numarası';
 $string['defaultnumberdescription'] = 'Kullanıcı profilindeki varsayılan WhatsApp numarası alanını seçin.';
-$string['defaultdbtracking'] = 'Veritabanı bildirim tablosunda izleme';
-$string['defaultdbtrackingdescription'] = 'İsteğe bağlı olarak, oluşturulan mesajları bildirimler tablosunda izlemeyi seçin.';
+$string['defaultdbtracking'] = 'whatsappgen_messages veritabanı tablosunda izleme';
+$string['defaultdbtrackingdescription'] = 'Oluşturulan mesajları whatsappgen_messages\'de izlemek için isteğe bağlı olarak seçin.';
 $string['defaultroles'] = 'İzin Verilen Roller';
 $string['defaultrolesdescription'] = 'Eklentiyi kullanma iznine sahip roller. Lütfen bu rollerin iletişim numaralarını görebileceğini unutmayın.';
 $string['limittext'] = 'Seçilen kullanıcıların sayısı sınırı aşıyor ';

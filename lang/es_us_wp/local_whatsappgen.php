@@ -17,7 +17,7 @@
 /**
  *  WhatsApp Message Generator
  *
- * @package    loca_whatsappgen
+ * @package    local_whatsappgen
  * @copyright  2024 Stephan Waetzig
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
@@ -25,8 +25,7 @@
 defined('MOODLE_INTERNAL') || die;
 
 $string['pluginname'] = 'Generador de WhatsApp';
-//$string['defaultapp'] = 'Usar la aplicación de escritorio de WhatsApp como predeterminada';
-//$string['defaultappdescription'] = 'Si está marcado, la aplicación de escritorio de WhatsApp será la predeterminada. Si no está marcado, WhatsApp Web será la predeterminada';
+$string['privacy:metadata'] = 'Este plugin no almacena datos personales.';
 $string['addwhatsapp'] = 'Añadir mensaje de WhatsApp';
 $string['error'] = 'Error fatal en el generador de WhatsApp. Por favor, contacte al administrador/soporte';
 $string['whatsapp_messagetext'] = 'El texto de su mensaje';
@@ -37,8 +36,8 @@ $string['limituser'] = 'Máximo de mensajes generados a la vez';
 $string['limituserdescription'] = 'Por favor, elija el número máximo de mensajes generados a la vez. Recomendamos 10. Un número mayor puede afectar el rendimiento de su computadora';
 $string['defaultnumber'] = 'Número de WhatsApp predeterminado';
 $string['defaultnumberdescription'] = 'Seleccione el campo predeterminado para el número de WhatsApp en el perfil del usuario.';
-$string['defaultdbtracking'] = 'Seguimiento en la tabla de notificaciones de la base de datos';
-$string['defaultdbtrackingdescription'] = 'Opcionalmente, elija seguir los mensajes generados en la tabla de notificaciones.';
+$string['defaultdbtracking'] = 'Seguimiento en la tabla de la base de datos whatsappgen_messages';
+$string['defaultdbtrackingdescription'] = 'Opcionalmente, elija rastrear los mensajes generados en whatsappgen_messages.';
 $string['defaultroles'] = 'Roles permitidos';
 $string['defaultrolesdescription'] = 'Roles permitidos para usar el plugin. Tenga en cuenta que estos roles podrán ver los números de contacto.';
 $string['limittext'] = 'El número de usuarios seleccionados excede el límite de ';

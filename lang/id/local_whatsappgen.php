@@ -17,7 +17,7 @@
 /**
  *  WhatsApp Message Generator
  *
- * @package    loca_whatsappgen
+ * @package    local_whatsappgen
  * @copyright  2024 Stephan Waetzig
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
@@ -25,8 +25,7 @@
 defined('MOODLE_INTERNAL') || die;
 
 $string['pluginname'] = 'Generator WhatsApp';
-//$string['defaultapp'] = 'Gunakan Aplikasi Desktop WhatsApp sebagai default';
-//$string['defaultappdescription'] = 'Jika dicentang, aplikasi desktop WhatsApp adalah default. Jika tidak dicentang, WhatsApp Web adalah default';
+$string['privacy:metadata'] = 'Plugin ini tidak menyimpan data pribadi.';
 $string['addwhatsapp'] = 'Tambahkan Pesan WhatsApp';
 $string['error'] = 'Kesalahan fatal dalam generator WhatsApp. Silakan hubungi admin/dukungan';
 $string['whatsapp_messagetext'] = 'Teks pesan Anda';
@@ -37,8 +36,8 @@ $string['limituser'] = 'Maksimum pesan yang dihasilkan sekaligus';
 $string['limituserdescription'] = 'Pilih jumlah maksimum pesan yang dihasilkan sekaligus. Kami merekomendasikan 10. Lebih banyak dapat mempengaruhi kinerja komputer Anda';
 $string['defaultnumber'] = 'Nomor WhatsApp Default';
 $string['defaultnumberdescription'] = 'Pilih bidang default untuk nomor WhatsApp di profil pengguna.';
-$string['defaultdbtracking'] = 'Pelacakan dalam tabel notifikasi database';
-$string['defaultdbtrackingdescription'] = 'Opsional, pilih untuk melacak pesan yang dihasilkan dalam tabel notifikasi.';
+$string['defaultdbtracking'] = 'Pelacakan di tabel basis data whatsappgen_messages';
+$string['defaultdbtrackingdescription'] = 'Pilihan opsional untuk melacak pesan yang dibuat di whatsappgen_messages.';
 $string['defaultroles'] = 'Peran yang Diperbolehkan';
 $string['defaultrolesdescription'] = 'Peran yang diizinkan untuk menggunakan plugin ini. Harap dicatat bahwa peran ini akan dapat melihat nomor kontak.';
 $string['limittext'] = 'Jumlah pengguna yang dipilih melebihi batas ';

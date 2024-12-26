@@ -17,7 +17,7 @@
 /**
  *  WhatsApp Message Generator
  *
- * @package    loca_whatsappgen
+ * @package    local_whatsappgen
  * @copyright  2024 Stephan Waetzig
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
@@ -25,8 +25,7 @@
 defined('MOODLE_INTERNAL') || die;
 
 $string['pluginname'] = 'WhatsApp-Generator';
-//$string['defaultapp'] = 'WhatsApp Desktop-Anwendung als Standard verwenden';
-//$string['defaultappdescription'] = 'Wenn aktiviert, ist die WhatsApp Desktop-Anwendung Standard. Wenn deaktiviert, ist WhatsApp Web Standard';
+$string['privacy:metadata'] = 'Dieses Plugin speichert keine personenbezogenen Daten.';
 $string['addwhatsapp'] = 'WhatsApp-Nachricht hinzufügen';
 $string['error'] = 'Schwerwiegender Fehler im WhatsApp-Generator. Bitte kontaktieren Sie den Administratoren / Support';
 $string['whatsapp_messagetext'] = 'Ihr Nachrichtentext';
@@ -37,8 +36,8 @@ $string['limituser'] = 'Maximal gleichzeitig generierte Nachrichten';
 $string['limituserdescription'] = 'Bitte wählen Sie die maximal gleichzeitig generierten Nachrichten. Wir empfehlen 10. Höhere Werte können die Computerleistung beeinträchtigen';
 $string['defaultnumber'] = 'Standard-WhatsApp-Nummer';
 $string['defaultnumberdescription'] = 'Wählen Sie das Standardfeld für die WhatsApp-Nummer im Benutzerprofil aus.';
-$string['defaultdbtracking'] = 'Verfolgung in der Datenbanktabelle Benachrichtigungen';
-$string['defaultdbtrackingdescription'] = 'Optional wählen, um generierte Nachrichten in der Benachrichtigungstabelle zu verfolgen.';
+$string['defaultdbtracking'] = 'Verfolgung in der Datenbanktabelle whatsappgen_messages';
+$string['defaultdbtrackingdescription'] = 'Optional wählen, um generierte Nachrichten in der whatsappgen_messages zu verfolgen.';
 $string['defaultroles'] = 'Zulässige Rollen';
 $string['defaultrolesdescription'] = 'Rollen, die das Plugin verwenden dürfen. Bitte beachten Sie, dass diese Rollen die Kontaktnummern sehen können.';
 $string['limittext'] = 'Die Anzahl der ausgewählten Benutzer überschreitet das Limit von ';

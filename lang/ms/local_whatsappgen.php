@@ -17,7 +17,7 @@
 /**
  *  WhatsApp Message Generator
  *
- * @package    loca_whatsappgen
+ * @package    local_whatsappgen
  * @copyright  2024 Stephan Waetzig
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
@@ -25,8 +25,7 @@
 defined('MOODLE_INTERNAL') || die;
 
 $string['pluginname'] = 'Generator WhatsApp';
-//$string['defaultapp'] = 'Gunakan Aplikasi Desktop WhatsApp sebagai lalai';
-//$string['defaultappdescription'] = 'Jika ditandai, aplikasi Desktop WhatsApp adalah lalai. Jika tidak ditandai, WhatsApp Web adalah lalai';
+$string['privacy:metadata'] = 'Plugin ini tidak menyimpan sebarang data peribadi.';
 $string['addwhatsapp'] = 'Tambah Mesej WhatsApp';
 $string['error'] = 'Ralat fatal dalam generator WhatsApp. Sila hubungi admin/sokongan';
 $string['whatsapp_messagetext'] = 'Teks mesej anda';
@@ -37,8 +36,8 @@ $string['limituser'] = 'Jumlah maksimum mesej yang dihasilkan sekaligus';
 $string['limituserdescription'] = 'Sila pilih jumlah maksimum mesej yang dihasilkan sekaligus. Kami mengesyorkan 10. Lebih banyak boleh mempengaruhi prestasi komputer anda';
 $string['defaultnumber'] = 'Nombor WhatsApp Lalai';
 $string['defaultnumberdescription'] = 'Pilih medan lalai untuk nombor WhatsApp dalam profil pengguna.';
-$string['defaultdbtracking'] = 'Penjejakan dalam jadual pemberitahuan pangkalan data';
-$string['defaultdbtrackingdescription'] = 'Secara pilihan, pilih untuk menjejaki mesej yang dihasilkan dalam jadual pemberitahuan.';
+$string['defaultdbtracking'] = 'Penjejakan dalam jadual pangkalan data whatsappgen_messages';
+$string['defaultdbtrackingdescription'] = 'Pilih secara opsional untuk menjejak mesej yang dijana dalam whatsappgen_messages.';
 $string['defaultroles'] = 'Peranan yang Dibenarkan';
 $string['defaultrolesdescription'] = 'Peranan yang dibenarkan menggunakan plugin. Sila ambil perhatian bahawa peranan ini akan dapat melihat nombor hubungan.';
 $string['limittext'] = 'Bilangan pengguna yang dipilih melebihi had ';

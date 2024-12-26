@@ -17,7 +17,7 @@
 /**
  *  WhatsApp Message Generator
  *
- * @package    loca_whatsappgen
+ * @package    local_whatsappgen
  * @copyright  2024 Stephan Waetzig
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
@@ -25,8 +25,7 @@
 defined('MOODLE_INTERNAL') || die;
 
 $string['pluginname'] = 'Generatore di WhatsApp';
-//$string['defaultapp'] = 'Usa l\'applicazione desktop di WhatsApp come predefinita';
-//$string['defaultappdescription'] = 'Se selezionato, l\'applicazione desktop di WhatsApp è predefinita. Se non selezionato, WhatsApp Web è predefinito';
+$string['privacy:metadata'] = 'Questo plugin non memorizza dati personali.';
 $string['addwhatsapp'] = 'Aggiungi messaggio WhatsApp';
 $string['error'] = 'Errore fatale nel generatore di WhatsApp. Si prega di contattare l\'amministratore/assistenza';
 $string['whatsapp_messagetext'] = 'Testo del tuo messaggio';
@@ -37,8 +36,8 @@ $string['limituser'] = 'Messaggi massimi generati alla volta';
 $string['limituserdescription'] = 'Si prega di scegliere il numero massimo di messaggi generati alla volta. Raccomandiamo 10. Un numero maggiore può influire sulle prestazioni del computer';
 $string['defaultnumber'] = 'Numero WhatsApp predefinito';
 $string['defaultnumberdescription'] = 'Seleziona il campo predefinito per il numero di WhatsApp nel profilo utente.';
-$string['defaultdbtracking'] = 'Tracciamento nella tabella delle notifiche del database';
-$string['defaultdbtrackingdescription'] = 'Opzionalmente, scegli di tracciare i messaggi generati nella tabella delle notifiche.';
+$string['defaultdbtracking'] = 'Tracciamento nella tabella del database whatsappgen_messages';
+$string['defaultdbtrackingdescription'] = 'Opzionalmente scegliere di tracciare i messaggi generati in whatsappgen_messages.';
 $string['defaultroles'] = 'Ruoli consentiti';
 $string['defaultrolesdescription'] = 'Ruoli autorizzati a utilizzare il plugin. Si prega di notare che questi ruoli saranno in grado di vedere i numeri di contatto.';
 $string['limittext'] = 'Il numero di utenti selezionati supera il limite di ';

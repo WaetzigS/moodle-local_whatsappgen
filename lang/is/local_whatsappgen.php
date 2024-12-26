@@ -17,7 +17,7 @@
 /**
  *  WhatsApp Message Generator
  *
- * @package    loca_whatsappgen
+ * @package    local_whatsappgen
  * @copyright  2024 Stephan Waetzig
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
@@ -25,8 +25,7 @@
 defined('MOODLE_INTERNAL') || die;
 
 $string['pluginname'] = 'WhatsApp Rafallinn';
-//$string['defaultapp'] = 'Nota WhatsApp skrifborðsforritið sem sjálfgefið';
-//$string['defaultappdescription'] = 'Ef merkt er, þá er WhatsApp skrifborðsforritið sjálfgefið. Ef ekki merkt er, þá er WhatsApp Web sjálfgefið';
+$string['privacy:metadata'] = 'Þessi viðbót geymir engar persónuupplýsingar.';
 $string['addwhatsapp'] = 'Bæta við WhatsApp skilaboðum';
 $string['error'] = 'Alvarleg villa í WhatsApp rafallinum. Vinsamlegast hafðu samband við kerfisstjóra/þjónustuaðila';
 $string['whatsapp_messagetext'] = 'Texti skilaboðanna þinna';
@@ -37,8 +36,8 @@ $string['limituser'] = 'Hámarksfjöldi skilaboða sem eru búin til í einu';
 $string['limituserdescription'] = 'Vinsamlegast veldu hámarksfjölda skilaboða sem eru búin til í einu. Við mælum með 10. Meira magn getur haft áhrif á afköst tölvunnar þinnar';
 $string['defaultnumber'] = 'Sjálfgefið WhatsApp númer';
 $string['defaultnumberdescription'] = 'Veldu sjálfgefna reitinn fyrir WhatsApp númer í notendaprófílnum.';
-$string['defaultdbtracking'] = 'Eftirlit í tilkynningatöflu í gagnagrunni';
-$string['defaultdbtrackingdescription'] = 'Valfrjálst, veldu að fylgjast með búnum skilaboðum í tilkynningatöflunni.';
+$string['defaultdbtracking'] = 'Eftirlit í gagnagrunnstöflu whatsappgen_messages';
+$string['defaultdbtrackingdescription'] = 'Veldu valfrjálst að fylgjast með búnum skilaboðum í whatsappgen_messages.';
 $string['defaultroles'] = 'Heimilað hlutverk';
 $string['defaultrolesdescription'] = 'Hlutverk sem mega nota viðbótina. Vinsamlegast athugið að þessi hlutverk munu sjá tengiliðanúmer.';
 $string['limittext'] = 'Fjöldi valinna notenda fer yfir mörk ';

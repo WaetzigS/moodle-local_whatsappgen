@@ -17,7 +17,7 @@
 /**
  *  WhatsApp Message Generator
  *
- * @package    loca_whatsappgen
+ * @package    local_whatsappgen
  * @copyright  2024 Stephan Waetzig
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
@@ -25,8 +25,7 @@
 defined('MOODLE_INTERNAL') || die;
 
 $string['pluginname'] = 'Gerador de WhatsApp';
-//$string['defaultapp'] = 'Usar a aplicação de ambiente de trabalho WhatsApp como predefinição';
-//$string['defaultappdescription'] = 'Se marcado, a aplicação de ambiente de trabalho WhatsApp será a predefinição. Se não for marcado, o WhatsApp Web será a predefinição';
+$string['privacy:metadata'] = 'Este plugin não armazena dados pessoais.';
 $string['addwhatsapp'] = 'Adicionar mensagem WhatsApp';
 $string['error'] = 'Erro fatal no gerador de WhatsApp. Por favor, contacte o administrador/suporte';
 $string['whatsapp_messagetext'] = 'O texto da sua mensagem';
@@ -37,8 +36,8 @@ $string['limituser'] = 'Mensagens geradas no máximo ao mesmo tempo';
 $string['limituserdescription'] = 'Por favor, escolha o número máximo de mensagens geradas ao mesmo tempo. Recomendamos 10. Mais do que isso pode afetar o desempenho do seu computador';
 $string['defaultnumber'] = 'Número WhatsApp predefinido';
 $string['defaultnumberdescription'] = 'Selecione o campo predefinido para o número WhatsApp no perfil do utilizador.';
-$string['defaultdbtracking'] = 'Rastreio na tabela de notificações da base de dados';
-$string['defaultdbtrackingdescription'] = 'Opcionalmente, escolha rastrear mensagens geradas na tabela de notificações.';
+$string['defaultdbtracking'] = 'Rastreamento na tabela de banco de dados whatsappgen_messages';
+$string['defaultdbtrackingdescription'] = 'Opcionalmente, escolha rastrear as mensagens geradas em whatsappgen_messages.';
 $string['defaultroles'] = 'Papéis permitidos';
 $string['defaultrolesdescription'] = 'Papéis permitidos para utilizar o plugin. Note que esses papéis poderão ver os números de contacto.';
 $string['limittext'] = 'O número de utilizadores selecionados excede o limite de ';

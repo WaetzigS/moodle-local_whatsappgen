@@ -15,7 +15,7 @@
 // along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
 
 /**
- * Settings for the HTML block
+ * Settings for Whatsapp Message Generator
  *
  * @copyright Stephan Waetzig
  * @license   http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
@@ -30,19 +30,6 @@ if ($hassiteconfig) {
     
     //Just bring the Plugin-Name
     $settings = new admin_settingpage('local_whatsappgen', new lang_string('pluginname', 'local_whatsappgen'));
-    /*
-    // WhatsApp App or Web --> out because Webapplication is working good too     
-    $options_defaultapp = [
-        'Web WhatsApp' => 'Web WhatsApp' ,
-        'WhatsApp Application' => 'WhatsApp Application' 
-    ];
-
-    $settings->add(new admin_setting_configselect('local_whatsappgen_defaultapp', get_string('defaultapp', 'local_whatsappgen'),
-                       get_string('defaultappdescription', 'local_whatsappgen'), 'WhatsApp Application' ,  $options_defaultapp));
-    */
-
-    //$settings->add(new admin_setting_configcheckbox('local_whatsappgen_defaultapp', get_string('defaultapp', 'local_whatsappgen'),
-    //                   get_string('defaultappdescription', 'local_whatsappgen'), 0));
 
     // Option 1 bis maximal 100            
     $options_limituser = [] ;
@@ -50,7 +37,7 @@ if ($hassiteconfig) {
         $options_limituser[$i] = (string)$i;
     }
 
-    $settings->add(new admin_setting_configselect('local_whatsappgen_limituser', get_string('limituser', 'local_whatsappgen'),
+    $settings->add(new admin_setting_configselect('localwhatsappgen/limituser', get_string('limituser', 'local_whatsappgen'),
                        get_string('limituserdescription', 'local_whatsappgen'), '10' ,  $options_limituser));
 
     // Option for phone 1 and 2             
@@ -59,7 +46,7 @@ if ($hassiteconfig) {
         'phone2' => get_string('phone2') 
     ];
 
-    $settings->add(new admin_setting_configselect('local_whatsappgen_default_number', get_string('defaultnumber', 'local_whatsappgen'),
+    $settings->add(new admin_setting_configselect('localwhatsappgen/defaultnumber', get_string('defaultnumber', 'local_whatsappgen'),
                        get_string('defaultnumberdescription', 'local_whatsappgen'), 'phone1' ,  $options_defaultnumber));
     
      // Option for roles   
@@ -68,16 +55,15 @@ if ($hassiteconfig) {
      foreach ($roles as $role) {
         $options_defaultroles[$role->id] = $role->shortname;
      }
-    $settings->add(new admin_setting_configmultiselect('local_whatsappgen_default_roles', get_string('defaultroles', 'local_whatsappgen'),
+    $settings->add(new admin_setting_configmultiselect('localwhatsappgen/defaultroles', get_string('defaultroles', 'local_whatsappgen'),
                         get_string('defaultrolesdescription', 'local_whatsappgen'), [] ,  $options_defaultroles));           
  
+    $settings->add(new admin_setting_configcheckbox('localwhatsappgen/trackingdb', get_string('defaultdbtracking', 'local_whatsappgen'),
+                    get_string('defaultdbtrackingdescription', 'local_whatsappgen') , 0));
 
-    $settings->add(new admin_setting_configcheckbox('local_whatsappgen_trackingdb', get_string('defaultdbtracking', 'local_whatsappgen'),
-                    get_string('defaultdbtrackingdescription', 'local_whatsappgen'), 0));
-
-    $settings->add(new admin_setting_heading('local_whatsappgen_licence' , get_string('licenceinfo', 'local_whatsappgen') , get_string('licenceinfodescription', 'local_whatsappgen') ));
+    $settings->add(new admin_setting_heading('localwhatsappgen/licence' , get_string('licenceinfo', 'local_whatsappgen') , 
+                    get_string('licenceinfodescription', 'local_whatsappgen') ));
     
-
     $ADMIN->add('localplugins', $settings);
 
     if ($ADMIN->fulltree) {

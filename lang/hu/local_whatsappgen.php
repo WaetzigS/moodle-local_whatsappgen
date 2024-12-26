@@ -17,7 +17,7 @@
 /**
  *  WhatsApp Message Generator
  *
- * @package    loca_whatsappgen
+ * @package    local_whatsappgen
  * @copyright  2024 Stephan Waetzig
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
@@ -25,8 +25,7 @@
 defined('MOODLE_INTERNAL') || die;
 
 $string['pluginname'] = 'WhatsApp Generátor';
-//$string['defaultapp'] = 'Használja a WhatsApp Desktop alkalmazást alapértelmezettként';
-//$string['defaultappdescription'] = 'Ha be van jelölve, a WhatsApp Desktop alkalmazás az alapértelmezett. Ha nincs bejelölve, akkor a WhatsApp Web az alapértelmezett';
+$string['privacy:metadata'] = 'Ez a bővítmény nem tárol személyes adatokat.';
 $string['addwhatsapp'] = 'WhatsApp üzenet hozzáadása';
 $string['error'] = 'Végzetes hiba a WhatsApp generátorban. Kérjük, lépjen kapcsolatba a támogatással';
 $string['whatsapp_messagetext'] = 'Az üzenet szövege';
@@ -37,8 +36,8 @@ $string['limituser'] = 'Egyszerre létrehozott maximális üzenetek';
 $string['limituserdescription'] = 'Kérjük, válassza ki az egyszerre létrehozott maximális üzenetek számát. Javasoljuk, hogy legyen 10. Több üzenet ronthatja a számítógép teljesítményét';
 $string['defaultnumber'] = 'Alapértelmezett WhatsApp szám';
 $string['defaultnumberdescription'] = 'Válassza ki az alapértelmezett mezőt a WhatsApp szám számára a felhasználói profilban.';
-$string['defaultdbtracking'] = 'Követés az Értesítések adatbázis táblában';
-$string['defaultdbtrackingdescription'] = 'Opcionálisan válassza ki, hogy a létrehozott üzenetek követése az értesítések táblában történjen.';
+$string['defaultdbtracking'] = 'Nyomon követés az adatbázis táblában: whatsappgen_messages';
+$string['defaultdbtrackingdescription'] = 'Opcionálisan válassza ki, hogy nyomon kövesse a létrehozott üzeneteket a whatsappgen_messages táblában.';
 $string['defaultroles'] = 'Engedélyezett szerepkörök';
 $string['defaultrolesdescription'] = 'A plugin használatára jogosult szerepkörök. Kérjük, vegye figyelembe, hogy ezek a szerepkörök láthatják a kapcsolattartási számokat.';
 $string['limittext'] = 'A kiválasztott felhasználók száma meghaladja a korlátot: ';

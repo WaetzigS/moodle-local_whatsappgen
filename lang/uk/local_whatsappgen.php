@@ -17,7 +17,7 @@
 /**
  *  WhatsApp Message Generator
  *
- * @package    loca_whatsappgen
+ * @package    local_whatsappgen
  * @copyright  2024 Stephan Waetzig
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
@@ -25,8 +25,7 @@
 defined('MOODLE_INTERNAL') || die;
 
 $string['pluginname'] = 'Генератор WhatsApp';
-//$string['defaultapp'] = 'Використовуйте додаток WhatsApp Desktop за замовчуванням';
-//$string['defaultappdescription'] = 'Якщо вибрано, додаток WhatsApp Desktop використовується за замовчуванням. Якщо не вибрано, використовується WhatsApp Web';
+$string['privacy:metadata'] = 'Цей плагін не зберігає персональні дані.';
 $string['addwhatsapp'] = 'Додати повідомлення WhatsApp';
 $string['error'] = 'Фатальна помилка у генераторі WhatsApp. Будь ласка, зверніться до адміністратора/підтримки';
 $string['whatsapp_messagetext'] = 'Текст вашого повідомлення';
@@ -37,8 +36,8 @@ $string['limituser'] = 'Максимальна кількість повідом
 $string['limituserdescription'] = 'Будь ласка, виберіть максимальну кількість повідомлень, що створюються одночасно. Рекомендуємо 10. Більша кількість може вплинути на продуктивність вашого комп’ютера';
 $string['defaultnumber'] = 'Номер WhatsApp за замовчуванням';
 $string['defaultnumberdescription'] = 'Виберіть поле за замовчуванням для номера WhatsApp у профілі користувача.';
-$string['defaultdbtracking'] = 'Відстеження у таблиці повідомлень бази даних';
-$string['defaultdbtrackingdescription'] = 'Опціонально виберіть відстежувати створені повідомлення у таблиці повідомлень.';
+$string['defaultdbtracking'] = 'Відстеження в таблиці бази даних whatsappgen_messages';
+$string['defaultdbtrackingdescription'] = 'Опціонально оберіть для відстеження створених повідомлень у whatsappgen_messages.';
 $string['defaultroles'] = 'Дозволені ролі';
 $string['defaultrolesdescription'] = 'Ролі, яким дозволено використовувати плагін. Зверніть увагу, що ці ролі зможуть бачити контактні номери.';
 $string['limittext'] = 'Кількість вибраних користувачів перевищує ліміт у ';

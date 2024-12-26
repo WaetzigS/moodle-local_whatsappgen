@@ -25,8 +25,7 @@
 defined('MOODLE_INTERNAL') || die;
 
 $string['pluginname'] = 'WhatsApp Generator';
-//$string['defaultapp'] = 'Bruk WhatsApp Desktop-applikasjonen som standard';
-//$string['defaultappdescription'] = 'Hvis merket, er WhatsApp Desktop-applikasjonen standard. Hvis ikke merket, er WhatsApp Web standard';
+$string['privacy:metadata'] = 'Denne pluginen lagrer ingen personlige data.';
 $string['addwhatsapp'] = 'Legg til WhatsApp-melding';
 $string['error'] = 'Fatal feil i WhatsApp-generatoren. Vennligst kontakt admin/support';
 $string['whatsapp_messagetext'] = 'Din meldingstekst';
@@ -37,8 +36,8 @@ $string['limituser'] = 'Maksimalt genererte meldinger samtidig';
 $string['limituserdescription'] = 'Vennligst velg maksimalt antall meldinger som genereres samtidig. Vi anbefaler 10. Flere kan påvirke datamaskinens ytelse';
 $string['defaultnumber'] = 'Standard WhatsApp-nummer';
 $string['defaultnumberdescription'] = 'Velg standardfeltet for WhatsApp-nummeret i brukerprofilen.';
-$string['defaultdbtracking'] = 'Sporing i databasen tabell Meldinger';
-$string['defaultdbtrackingdescription'] = 'Valgfritt, velg å spore genererte meldinger i meldingstabellen.';
+$string['defaultdbtracking'] = 'Rastreamento na tabela de banco de dados whatsappgen_messages';
+$string['defaultdbtrackingdescription'] = 'Opcionalmente, escolha rastrear as mensagens geradas em whatsappgen_messages.';
 $string['defaultroles'] = 'Tillatte roller';
 $string['defaultrolesdescription'] = 'Roller som er tillatt å bruke pluginen. Vennligst merk at disse rollene vil kunne se kontakttelefonnumrene.';
 $string['limittext'] = 'Antall valgte brukere overskrider grensen på ';

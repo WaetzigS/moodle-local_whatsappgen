@@ -17,7 +17,7 @@
 /**
  *  WhatsApp Message Generator
  *
- * @package    loca_whatsappgen
+ * @package    local_whatsappgen
  * @copyright  2024 Stephan Waetzig
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
@@ -25,8 +25,7 @@
 defined('MOODLE_INTERNAL') || die;
 
 $string['pluginname'] = 'מחולל WhatsApp';
-//$string['defaultapp'] = 'השתמש ביישום שולחן עבודה של WhatsApp כברירת מחדל';
-//$string['defaultappdescription'] = 'אם מסומן, יישום שולחן העבודה של WhatsApp הוא ברירת המחדל. אם לא מסומן, WhatsApp Web הוא ברירת המחדל';
+$string['privacy:metadata'] = 'תוסף זה לא שומר נתונים אישיים.';
 $string['addwhatsapp'] = 'הוסף הודעת WhatsApp';
 $string['error'] = 'שגיאה חמורה במחולל WhatsApp. אנא פנה לתמיכה';
 $string['whatsapp_messagetext'] = 'טקסט ההודעה שלך';
@@ -37,8 +36,8 @@ $string['limituser'] = 'מספר הודעות מרבי ליצירה בו זמנ�
 $string['limituserdescription'] = 'אנא בחר את המספר המרבי של הודעות שנוצרות בו זמנית. אנו ממליצים על 10. מספר גדול יותר יכול להשפיע על ביצועי המחשב שלך';
 $string['defaultnumber'] = 'מספר WhatsApp ברירת מחדל';
 $string['defaultnumberdescription'] = 'בחר את השדה ברירת מחדל עבור מספר WhatsApp בפרופיל המשתמש.';
-$string['defaultdbtracking'] = 'מעקב בטבלת התראות במסד הנתונים';
-$string['defaultdbtrackingdescription'] = 'בחר באופן אופציונלי לעקוב אחר הודעות שנוצרו בטבלת ההתראות.';
+$string['defaultdbtracking'] = 'מעקב בטבלת בסיס הנתונים whatsappgen_messages';
+$string['defaultdbtrackingdescription'] = 'בחר באופן אופציונלי לעקוב אחר הודעות שנוצרו בטבלת whatsappgen_messages.';
 $string['defaultroles'] = 'תפקידים מותרים';
 $string['defaultrolesdescription'] = 'תפקידים המורשים להשתמש בתוסף. שים לב שהתפקידים הללו יוכלו לראות את מספרי הקשר.';
 $string['limittext'] = 'מספר המשתמשים שנבחרו עולה על המגבלה של ';
