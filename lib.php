@@ -49,7 +49,6 @@ function local_whatsappgen_extend_settings_navigation(settings_navigation $setti
         $roles = get_user_roles($context, $USER->id, true);
         $access_whatsapp = false;
         foreach ($roles as $role) {
-            //$rolestr[] = $role->roleid;
             if (in_array($role->roleid , $setroles)) {
                 $access_whatsapp = true;
                 break; 
