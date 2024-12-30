@@ -33,7 +33,7 @@ require_once($CFG->libdir . '/pagelib.php');
 
 
 function local_whatsappgen_extend_settings_navigation(settings_navigation $settingsnav, context $context) {
-    global $PAGE , $DB , $USER , $COURSE , $CFG;
+    global $PAGE , $USER , $COURSE;
 
     //check if course is there and role is allowed
     
@@ -44,7 +44,7 @@ function local_whatsappgen_extend_settings_navigation(settings_navigation $setti
         } else {
             $setroles = explode(',' ,  $defaultroles);
         }
-    
+        
         $context = context_course::instance($COURSE->id);
         $roles = get_user_roles($context, $USER->id, true);
         $access_whatsapp = false;
@@ -57,14 +57,16 @@ function local_whatsappgen_extend_settings_navigation(settings_navigation $setti
             }
         }
         
-        // Open the Javascript, if it's in course
+        // Open the Javascript, if it's in course 
         if ($PAGE->url->compare(new moodle_url('/user/index.php'), URL_MATCH_BASE)) {
                 if ($access_whatsapp == true) { 
                     $course = $COURSE->id;
-                    
-                    $PAGE->requires->js_call_amd('local_whatsappgen/whatsapp', 'init' , [
+                    $PAGE->requires->js_call_amd("local_whatsappgen/whatsapp", 'init', [$course]);
+                    //$PAGE->requires->js_init_code('console.log("Courseid ist ' . $course . '");');
+                    /*$PAGE->requires->js_call_amd('local_whatsappgen/whatsapp', 'init' , [
                         $course,
-                    ]);
+                    ]);*/
+                    
             }
         }
     }

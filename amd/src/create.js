@@ -21,19 +21,16 @@
  * @copyright   2024 Stephan Waetzig
  * @license     http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
-define(['jquery'], function(jQuery) {
-    //at first for the whole array
-    var init = function(data) {
-        $(document).ready(function() {
-            //now for every avlue in the array
-            data.forEach(function(item) {
-                var url = 'https://wa.me/' + item.phonenumber + '?text=' + encodeURIComponent(item.text);
-                window.open(url, "_blank");
-            });
-        });
-    }
 
+define('local_whatsappgen/create', ["jquery"], function($) {
     return {
-        init: init
-    };
+        init: function(data) {
+            $(document).ready(function() {
+                data.forEach(function(item) {
+                    var url = 'https://wa.me/' + item.phonenumber + '?text=' + encodeURIComponent(item.text);
+                    window.open(url, "_blank");
+                });
+            });
+        }
+    }
 });
