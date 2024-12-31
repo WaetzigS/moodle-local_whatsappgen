@@ -25,7 +25,11 @@
 defined('MOODLE_INTERNAL') || die;
 
 $string['pluginname'] = 'WhatsApp Oluşturucu';
-$string['privacy:metadata'] = 'Bu eklenti herhangi bir kişisel veri depolamaz.';
+$string['privacy:metadata:local_whatsappgen'] = 'WhatsApp tarafından saklanan bilgiler.';
+$string['privacy:metadata:local_whatsappgen:useridfrom'] = 'Mesajı gönderen kullanıcının ID\'si.';
+$string['privacy:metadata:local_whatsappgen:userid_to'] = 'Mesajı alan kullanıcının ID\'si.';
+$string['privacy:metadata:local_whatsappgen:message'] = 'Mesajın içeriği.';
+$string['privacy:metadata:local_whatsappgen:timecreated'] = 'Mesajın oluşturulma tarihi.';
 $string['addwhatsapp'] = 'WhatsApp Mesajı Ekle';
 $string['error'] = 'WhatsApp oluşturucusunda ölümcül hata. Lütfen yönetici/destek ile iletişime geçin';
 $string['whatsapp_messagetext'] = 'Mesajınızın metni';

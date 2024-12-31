@@ -15,10 +15,9 @@ The following git branches are supported:
 | Moodle 4.3            | MOODLE_403_STABLE |
 | Moodle 4.4            | MOODLE_404_STABLE |
 
-
 # PURPOSE
 
-For many participants and in situations where you need a fast reply from them, WhatsApp is more effective. With this plugin, you can create messages with placeholders, such as name, groups, etc., and send them to the participants.
+For many participants and in situations where you need a fast reply from them, WhatsApp is more effective. With this plugin, you can create messages with placeholders, such as name, etc., and send them to the participants.
 
 This plugin is not intended for sending bulk messages for non-educational or commercial purposes.
 
@@ -81,7 +80,7 @@ Please select the user field where you save the WhatsApp numbers. You can save t
 3. Allow Roles
 Here, you can set the default roles that are allowed to use this plugin and create messages. Please note that after the creation, the number of participants will be displayed.
 
-4. Tracking in whatsappgen_messages
+4. Tracking in Database
 You can set up database tracking in the whatsappgen_messages table here. This allows you to see which users created messages for which participants. Please note that creating a message does not guarantee it is sent. It's possible that the WhatsApp number is invalid or not available in the system.
 
 # FAQ

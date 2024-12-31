@@ -23,9 +23,12 @@
  */
 
 defined('MOODLE_INTERNAL') || die;
-
 $string['pluginname'] = 'WhatsApp Generatoru';
-$string['privacy:metadata'] = 'Bu plugin şəxsi məlumatları saxlamır.';
+$string['privacy:metadata:local_whatsappgen'] = 'WhatsApp-da saxlanılan məlumat.';
+$string['privacy:metadata:local_whatsappgen:useridfrom'] = 'Mesaj göndərən istifadəçinin ID-si.';
+$string['privacy:metadata:local_whatsappgen:userid_to'] = 'Mesaj alan istifadəçinin ID-si.';
+$string['privacy:metadata:local_whatsappgen:message'] = 'Mesajın məzmunu.';
+$string['privacy:metadata:local_whatsappgen:timecreated'] = 'Mesajın yaradılma tarixi.';
 $string['addwhatsapp'] = 'WhatsApp Mesajı Əlavə et';
 $string['error'] = 'WhatsApp Generatorunda fatal səhv. Zəhmət olmasa admin ilə əlaqə saxlayın';
 $string['whatsapp_messagetext'] = 'Mesaj mətniniz';

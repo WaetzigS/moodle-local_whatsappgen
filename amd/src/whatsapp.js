@@ -22,9 +22,11 @@
  * @license     http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 define(['jquery'], function(jQuery) {
+    window.alert("Test");
     // Call the init function
     var init = function(courseid) {
         $(document).ready(function() {
+            
             
             // Call Function to get the userids and show/hide Link/Logo
             prepareWhatsApp()

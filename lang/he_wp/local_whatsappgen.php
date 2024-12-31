@@ -25,7 +25,11 @@
 defined('MOODLE_INTERNAL') || die;
 
 $string['pluginname'] = 'מחולל WhatsApp';
-$string['privacy:metadata'] = 'תוסף זה לא שומר נתונים אישיים.';
+$string['privacy:metadata:local_whatsappgen'] = 'מידע שנשמר על ידי WhatsApp.';
+$string['privacy:metadata:local_whatsappgen:useridfrom'] = 'מזהה המשתמש ששלח את ההודעה.';
+$string['privacy:metadata:local_whatsappgen:userid_to'] = 'מזהה המשתמש שקיבל את ההודעה.';
+$string['privacy:metadata:local_whatsappgen:message'] = 'תוכן ההודעה.';
+$string['privacy:metadata:local_whatsappgen:timecreated'] = 'תאריך יצירת ההודעה.';
 $string['addwhatsapp'] = 'הוסף הודעת WhatsApp';
 $string['error'] = 'שגיאה חמורה במחולל WhatsApp. אנא פנה לתמיכה';
 $string['whatsapp_messagetext'] = 'טקסט ההודעה שלך';

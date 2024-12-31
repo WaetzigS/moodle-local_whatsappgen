@@ -17,7 +17,7 @@
 /**
  *  WhatsApp Message Generator
  *
- * @package    loca_whatsappgen
+ * @package    local_whatsappgen
  * @copyright  2024 Stephan Waetzig
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
@@ -25,7 +25,11 @@
 defined('MOODLE_INTERNAL') || die;
 
 $string['pluginname'] = 'WhatsApp Generator';
-$string['privacy:metadata'] = 'Denne pluginen lagrer ingen personlige data.';
+$string['privacy:metadata:local_whatsappgen'] = 'Informasjon lagret av WhatsApp.';
+$string['privacy:metadata:local_whatsappgen:useridfrom'] = 'ID-en til brukeren som sendte meldingen.';
+$string['privacy:metadata:local_whatsappgen:userid_to'] = 'ID-en til brukeren som mottok meldingen.';
+$string['privacy:metadata:local_whatsappgen:message'] = 'Innholdet i meldingen.';
+$string['privacy:metadata:local_whatsappgen:timecreated'] = 'Datoen meldingen ble opprettet.';
 $string['addwhatsapp'] = 'Legg til WhatsApp-melding';
 $string['error'] = 'Fatal feil i WhatsApp-generatoren. Vennligst kontakt admin/support';
 $string['whatsapp_messagetext'] = 'Din meldingstekst';
@@ -36,8 +40,8 @@ $string['limituser'] = 'Maksimalt genererte meldinger samtidig';
 $string['limituserdescription'] = 'Vennligst velg maksimalt antall meldinger som genereres samtidig. Vi anbefaler 10. Flere kan påvirke datamaskinens ytelse';
 $string['defaultnumber'] = 'Standard WhatsApp-nummer';
 $string['defaultnumberdescription'] = 'Velg standardfeltet for WhatsApp-nummeret i brukerprofilen.';
-$string['defaultdbtracking'] = 'Rastreamento na tabela de banco de dados whatsappgen_messages';
-$string['defaultdbtrackingdescription'] = 'Opcionalmente, escolha rastrear as mensagens geradas em whatsappgen_messages.';
+$string['defaultdbtracking'] = 'Sporing i databastabellen whatsappgen_messages';
+$string['defaultdbtrackingdescription'] = 'Valgfritt å velge å spore genererte meldinger i whatsappgen_messages.';
 $string['defaultroles'] = 'Tillatte roller';
 $string['defaultrolesdescription'] = 'Roller som er tillatt å bruke pluginen. Vennligst merk at disse rollene vil kunne se kontakttelefonnumrene.';
 $string['limittext'] = 'Antall valgte brukere overskrider grensen på ';

@@ -25,7 +25,11 @@
 defined('MOODLE_INTERNAL') || die;
 
 $string['pluginname'] = 'WhatsApp Rafallinn';
-$string['privacy:metadata'] = 'Þessi viðbót geymir engar persónuupplýsingar.';
+$string['privacy:metadata:local_whatsappgen'] = 'Upplýsingar sem WhatsApp geymir.';
+$string['privacy:metadata:local_whatsappgen:useridfrom'] = 'Notandakenni sem sendi skilaboðin.';
+$string['privacy:metadata:local_whatsappgen:userid_to'] = 'Notandakenni sem fékk skilaboðin.';
+$string['privacy:metadata:local_whatsappgen:message'] = 'Innihald skilaboðanna.';
+$string['privacy:metadata:local_whatsappgen:timecreated'] = 'Dagsetning skapaðra skilaboða.';
 $string['addwhatsapp'] = 'Bæta við WhatsApp skilaboðum';
 $string['error'] = 'Alvarleg villa í WhatsApp rafallinum. Vinsamlegast hafðu samband við kerfisstjóra/þjónustuaðila';
 $string['whatsapp_messagetext'] = 'Texti skilaboðanna þinna';

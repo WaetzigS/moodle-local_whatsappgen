@@ -25,7 +25,11 @@
 defined('MOODLE_INTERNAL') || die;
 
 $string['pluginname'] = 'WhatsApp 生成器';
-$string['privacy:metadata'] = '此插件不存储任何个人数据。';
+$string['privacy:metadata:local_whatsappgen'] = 'WhatsApp 存储的信息。';
+$string['privacy:metadata:local_whatsappgen:useridfrom'] = '发送消息的用户 ID。';
+$string['privacy:metadata:local_whatsappgen:userid_to'] = '接收消息的用户 ID。';
+$string['privacy:metadata:local_whatsappgen:message'] = '消息内容。';
+$string['privacy:metadata:local_whatsappgen:timecreated'] = '消息创建日期。';
 $string['addwhatsapp'] = '添加 WhatsApp 消息';
 $string['error'] = 'WhatsApp 生成器中的致命错误。请联系管理员/支持';
 $string['whatsapp_messagetext'] = '您的消息文本';

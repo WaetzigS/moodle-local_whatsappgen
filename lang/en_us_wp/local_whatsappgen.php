@@ -23,7 +23,11 @@
  */
 
 defined('MOODLE_INTERNAL') || die;
-
+$string['privacy:metadata:local_whatsappgen'] = 'Information stored by WhatsApp.';
+$string['privacy:metadata:local_whatsappgen:useridfrom'] = 'The ID of the user who sent the message.';
+$string['privacy:metadata:local_whatsappgen:userid_to'] = 'The ID of the user who received the message.';
+$string['privacy:metadata:local_whatsappgen:message'] = 'The content of the message.';
+$string['privacy:metadata:local_whatsappgen:timecreated'] = 'The creation date of the message.';
 $string['pluginname'] = 'WhatsApp Generator';
 $string['privacy:metadata'] = 'This plugin does not store any personal data.';
 $string['addwhatsapp'] = 'Add WhatsApp Message';
@@ -37,7 +41,7 @@ $string['limituserdescription'] = 'Please choose the maximum generated messages 
 $string['defaultnumber'] = 'Default WhatsApp Number';
 $string['defaultnumberdescription'] = 'Select the default field for the WhatsApp number in the user profile.';
 $string['defaultdbtracking'] = 'Tracking in Database table whatsappgen_messages';
-$string['defaultdbtrackingdescription'] = 'Optionally, select to track generated messages in the whatsappgen_messages table.';
+$string['defaultdbtrackingdescription'] = 'Optionally, select to track generated messages in the notifications table.';
 $string['defaultroles'] = 'Allowed Roles';
 $string['defaultrolesdescription'] = 'Roles allowed to use the plugin. Please note that these roles will be able to see the contact numbers.';
 $string['limittext'] = 'The number of selected users exceeds the limit of ';
@@ -48,7 +52,6 @@ $string['placeholders'] = 'Overview of Placeholders';
 $string['phfirstname'] = '%%firstname%% &rarr; first name of the participant';
 $string['phlastname'] = '%%lastname%% &rarr; last name of the participant';
 $string['phemail'] = '%%email%% &rarr; email-address of the participant';
-$string['phgroups'] = '%%groupname%% &rarr; all the groups in this course where the participant is enrolled';
 $string['phfullname'] = '%%fullname%% &rarr; fullname of this course';
 $string['phshortname'] = '%%shortname%% &rarr; shortname of this course';
 $string['textformatting'] = 'Overview of Text Formatting';
@@ -58,8 +61,3 @@ $string['tfstrikethrough'] = '~Text~ &rarr; score out: ';
 $string['tfmonospace'] = '```Text``` &rarr; into monospace format: ';
 $string['licenceinfo'] = 'Conditions';
 $string['licenceinfodescription'] = 'I undersatand, the author of this plugin assumes no responsibility for any legal infringements. Please adhere to WhatsApp licensing terms.<br>Please check the <a href="https://www.whatsapp.com/legal" target="_blank">legal of Whatsapp</a>';
-
-
-
-
-

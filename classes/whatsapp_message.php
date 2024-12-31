@@ -38,15 +38,15 @@ class whatsapp_message extends moodleform {
     // Add elements to form.
     public function definition() {
         global $DB;
-        $userids = optional_param('userid', '1', PARAM_RAW);
-        $courseid = optional_param('courseid', '1', PARAM_RAW);
+        $userids = optional_param('userid', '1', PARAM_SEQUENCE);
+        $courseid = optional_param('courseid', '1', PARAM_SEQUENCE);
         // A reference to the form is stored in $this->form.
         // A common convention is to store it in a variable, such as `$mform`.
         $mform = $this->_form; // Don't forget the underscore!
 
         // Add elements to your form.
         $mform->addElement('hidden', 'courseid', $courseid);
-        $mform->setType('courseid', PARAM_RAW);
+        $mform->setType('courseid', PARAM_SEQUENCE);
 
         //Go in class and get Usernames, ID's via the function inside
         $userlistclass = new getusers($DB);
@@ -57,7 +57,7 @@ class whatsapp_message extends moodleform {
         }
 
         $mform->addElement('hidden', 'userid', implode(',', $userlistforform));
-        $mform->setType('userid', PARAM_RAW);
+        $mform->setType('userid', PARAM_SEQUENCE);
 
 
         $mform->addElement('textarea', 'whatsapp_messagetext', get_string('messagetext' , 'local_whatsappgen'));
