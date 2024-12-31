@@ -25,7 +25,11 @@
 defined('MOODLE_INTERNAL') || die;
 
 $string['pluginname'] = 'โปรแกรมสร้าง WhatsApp';
-$string['privacy:metadata'] = 'ปลั๊กอินนี้ไม่เก็บข้อมูลส่วนตัวใด ๆ';
+$string['privacy:metadata:local_whatsappgen'] = 'ข้อมูลที่เก็บโดย WhatsApp.';
+$string['privacy:metadata:local_whatsappgen:useridfrom'] = 'รหัสผู้ใช้ที่ส่งข้อความ.';
+$string['privacy:metadata:local_whatsappgen:userid_to'] = 'รหัสผู้ใช้ที่รับข้อความ.';
+$string['privacy:metadata:local_whatsappgen:message'] = 'เนื้อหาของข้อความ.';
+$string['privacy:metadata:local_whatsappgen:timecreated'] = 'วันที่สร้างข้อความ.';
 $string['addwhatsapp'] = 'เพิ่มข้อความ WhatsApp';
 $string['error'] = 'ข้อผิดพลาดร้ายแรงในโปรแกรมสร้าง WhatsApp กรุณาติดต่อผู้ดูแลระบบ/ฝ่ายสนับสนุน';
 $string['whatsapp_messagetext'] = 'ข้อความของคุณ';

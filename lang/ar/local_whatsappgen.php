@@ -25,7 +25,11 @@
 defined('MOODLE_INTERNAL') || die;
 
 $string['pluginname'] = 'مولد واتساب';
-$string['privacy:metadata'] = 'هذا المكون الإضافي لا يخزن أي بيانات شخصية.';
+$string['privacy:metadata:local_whatsappgen'] = 'المعلومات المخزنة بواسطة واتساب.';
+$string['privacy:metadata:local_whatsappgen:useridfrom'] = 'معرّف المستخدم الذي أرسل الرسالة.';
+$string['privacy:metadata:local_whatsappgen:userid_to'] = 'معرّف المستخدم الذي تلقى الرسالة.';
+$string['privacy:metadata:local_whatsappgen:message'] = 'محتوى الرسالة.';
+$string['privacy:metadata:local_whatsappgen:timecreated'] = 'تاريخ إنشاء الرسالة.';
 $string['addwhatsapp'] = 'إضافة رسالة واتساب';
 $string['error'] = 'خطأ فادح في مولد واتساب. يرجى الاتصال بالدعم الفني';
 $string['whatsapp_messagetext'] = 'نص رسالتك';
@@ -58,9 +62,3 @@ $string['tfstrikethrough'] = '~النص~ &rarr; مشطوب: ';
 $string['tfmonospace'] = '```النص``` &rarr; صيغة الحروف المتباعدة: ';
 $string['licenceinfo'] = 'الشروط';
 $string['licenceinfodescription'] = 'أفهم أن مؤلف هذه الإضافة لا يتحمل أي مسؤولية عن أي انتهاكات قانونية. يرجى الالتزام بشروط ترخيص واتساب.<br>يرجى مراجعة <a href="https://www.whatsapp.com/legal" target="_blank">الشروط القانونية لواتساب</a>';
-
-
-
-
-
-

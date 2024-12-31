@@ -38,7 +38,7 @@ function local_whatsappgen_extend_settings_navigation(settings_navigation $setti
     //check if course is there and role is allowed
     
     if ($COURSE->id > 1) {
-        $defaultroles = get_config('localwhatsappgen' , 'defaultroles');
+        $defaultroles = get_config('local_whatsappgen' , 'defaultroles');
         if ($defaultroles === NULL) {
             $setroles = 0;
         } else {
@@ -62,11 +62,6 @@ function local_whatsappgen_extend_settings_navigation(settings_navigation $setti
                 if ($access_whatsapp == true) { 
                     $course = $COURSE->id;
                     $PAGE->requires->js_call_amd("local_whatsappgen/whatsapp", 'init', [$course]);
-                    //$PAGE->requires->js_init_code('console.log("Courseid ist ' . $course . '");');
-                    /*$PAGE->requires->js_call_amd('local_whatsappgen/whatsapp', 'init' , [
-                        $course,
-                    ]);*/
-                    
             }
         }
     }

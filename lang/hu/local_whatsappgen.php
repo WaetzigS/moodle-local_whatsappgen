@@ -25,7 +25,11 @@
 defined('MOODLE_INTERNAL') || die;
 
 $string['pluginname'] = 'WhatsApp Generátor';
-$string['privacy:metadata'] = 'Ez a bővítmény nem tárol személyes adatokat.';
+$string['privacy:metadata:local_whatsappgen'] = 'A WhatsApp által tárolt információk.';
+$string['privacy:metadata:local_whatsappgen:useridfrom'] = 'Az üzenetet küldő felhasználó azonosítója.';
+$string['privacy:metadata:local_whatsappgen:userid_to'] = 'Az üzenetet fogadó felhasználó azonosítója.';
+$string['privacy:metadata:local_whatsappgen:message'] = 'Az üzenet tartalma.';
+$string['privacy:metadata:local_whatsappgen:timecreated'] = 'Az üzenet létrehozásának dátuma.';
 $string['addwhatsapp'] = 'WhatsApp üzenet hozzáadása';
 $string['error'] = 'Végzetes hiba a WhatsApp generátorban. Kérjük, lépjen kapcsolatba a támogatással';
 $string['whatsapp_messagetext'] = 'Az üzenet szövege';

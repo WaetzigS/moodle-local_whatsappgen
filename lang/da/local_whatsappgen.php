@@ -25,7 +25,11 @@
 defined('MOODLE_INTERNAL') || die;
 
 $string['pluginname'] = 'WhatsApp Generator';
-$string['privacy:metadata'] = 'Denne plugin gemmer ikke nogen personlige data.';
+$string['privacy:metadata:local_whatsappgen'] = 'Oplysninger gemt af WhatsApp.';
+$string['privacy:metadata:local_whatsappgen:useridfrom'] = 'ID for brugeren, der sendte beskeden.';
+$string['privacy:metadata:local_whatsappgen:userid_to'] = 'ID for brugeren, der modtog beskeden.';
+$string['privacy:metadata:local_whatsappgen:message'] = 'Indholdet af beskeden.';
+$string['privacy:metadata:local_whatsappgen:timecreated'] = 'Oprettelsesdato for beskeden.';
 $string['addwhatsapp'] = 'Tilføj WhatsApp-besked';
 $string['error'] = 'Fatal fejl i WhatsApp-generatoren. Kontakt venligst admin/support';
 $string['whatsapp_messagetext'] = 'Din beskedtekst';

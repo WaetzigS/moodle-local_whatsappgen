@@ -25,7 +25,11 @@
 defined('MOODLE_INTERNAL') || die;
 
 $string['pluginname'] = 'Gerador de WhatsApp';
-$string['privacy:metadata'] = 'Este plugin não armazena dados pessoais.';
+$string['privacy:metadata:local_whatsappgen'] = 'Informações armazenadas pelo WhatsApp.';
+$string['privacy:metadata:local_whatsappgen:useridfrom'] = 'ID do usuário que enviou a mensagem.';
+$string['privacy:metadata:local_whatsappgen:userid_to'] = 'ID do usuário que recebeu a mensagem.';
+$string['privacy:metadata:local_whatsappgen:message'] = 'O conteúdo da mensagem.';
+$string['privacy:metadata:local_whatsappgen:timecreated'] = 'A data de criação da mensagem.';
 $string['addwhatsapp'] = 'Adicionar mensagem WhatsApp';
 $string['error'] = 'Erro fatal no gerador de WhatsApp. Por favor, contacte o administrador/suporte';
 $string['whatsapp_messagetext'] = 'O texto da sua mensagem';

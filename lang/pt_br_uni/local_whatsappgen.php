@@ -25,7 +25,11 @@
 defined('MOODLE_INTERNAL') || die;
 
 $string['pluginname'] = 'Gerador de WhatsApp';
-$string['privacy:metadata'] = 'Este plugin não armazena dados pessoais.';
+$string['privacy:metadata:local_whatsappgen'] = 'Informações armazenadas pelo WhatsApp.';
+$string['privacy:metadata:local_whatsappgen:useridfrom'] = 'ID do usuário que enviou a mensagem.';
+$string['privacy:metadata:local_whatsappgen:userid_to'] = 'ID do usuário que recebeu a mensagem.';
+$string['privacy:metadata:local_whatsappgen:message'] = 'O conteúdo da mensagem.';
+$string['privacy:metadata:local_whatsappgen:timecreated'] = 'A data de criação da mensagem.';
 $string['addwhatsapp'] = 'Adicionar mensagem WhatsApp';
 $string['error'] = 'Erro fatal no gerador de WhatsApp. Por favor, contacte o administrador/suporte';
 $string['whatsapp_messagetext'] = 'O texto da sua mensagem';
@@ -36,8 +40,8 @@ $string['limituser'] = 'Mensagens geradas no máximo ao mesmo tempo';
 $string['limituserdescription'] = 'Por favor, escolha o número máximo de mensagens geradas ao mesmo tempo. Recomendamos 10. Mais do que isso pode afetar o desempenho do seu computador';
 $string['defaultnumber'] = 'Número WhatsApp predefinido';
 $string['defaultnumberdescription'] = 'Selecione o campo predefinido para o número WhatsApp no perfil do utilizador.';
-$string['defaultdbtracking'] = 'Rastreamento na tabela de banco de dados whatsappgen_messages';
-$string['defaultdbtrackingdescription'] = 'Opcionalmente, escolha rastrear as mensagens geradas em whatsappgen_messages.';
+$string['defaultdbtracking'] = 'Rastreio na tabela de notificações da base de dados';
+$string['defaultdbtrackingdescription'] = 'Opcionalmente, escolha rastrear mensagens geradas na tabela de notificações.';
 $string['defaultroles'] = 'Papéis permitidos';
 $string['defaultrolesdescription'] = 'Papéis permitidos para utilizar o plugin. Note que esses papéis poderão ver os números de contacto.';
 $string['limittext'] = 'O número de utilizadores selecionados excede o limite de ';

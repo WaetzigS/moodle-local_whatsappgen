@@ -36,7 +36,7 @@ class getusers {
     // Function to get userlist
     public function userlist($userids) {
         //Get setting defaultnumber
-        $setting_defaultnumber = get_config('localwhatsappgen' , 'defaultnumber');
+        $setting_defaultnumber = get_config('local_whatsappgen' , 'defaultnumber');
 
         $userlist_array = explode(',', $userids);
         $userlist = $this->DB->get_records_list('user', 'id', $userlist_array);

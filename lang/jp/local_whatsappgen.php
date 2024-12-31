@@ -25,7 +25,11 @@
 defined('MOODLE_INTERNAL') || die;
 
 $string['pluginname'] = 'WhatsAppジェネレーター';
-$string['privacy:metadata'] = 'このプラグインは個人情報を保存しません。';
+$string['privacy:metadata:local_whatsappgen'] = 'WhatsAppによって保存された情報。';
+$string['privacy:metadata:local_whatsappgen:useridfrom'] = 'メッセージを送信したユーザーのID。';
+$string['privacy:metadata:local_whatsappgen:userid_to'] = 'メッセージを受信したユーザーのID。';
+$string['privacy:metadata:local_whatsappgen:message'] = 'メッセージの内容。';
+$string['privacy:metadata:local_whatsappgen:timecreated'] = 'メッセージの作成日。';
 $string['addwhatsapp'] = 'WhatsAppメッセージを追加';
 $string['error'] = 'WhatsAppジェネレーターの致命的なエラーです。管理者/サポートに連絡してください';
 $string['whatsapp_messagetext'] = 'メッセージのテキスト';

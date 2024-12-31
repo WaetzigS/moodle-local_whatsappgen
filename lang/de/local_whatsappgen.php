@@ -23,7 +23,11 @@
  */
 
 defined('MOODLE_INTERNAL') || die;
-
+$string['privacy:metadata:local_whatsappgen'] = 'Informationen, die von WhatsApp gespeichert werden.';
+$string['privacy:metadata:local_whatsappgen:useridfrom'] = 'Die ID des Benutzers, der die Nachricht gesendet hat.';
+$string['privacy:metadata:local_whatsappgen:userid_to'] = 'Die ID des Benutzers, der die Nachricht empfangen hat.';
+$string['privacy:metadata:local_whatsappgen:message'] = 'Der Inhalt der Nachricht.';
+$string['privacy:metadata:local_whatsappgen:timecreated'] = 'Das Erstellungsdatum der Nachricht.';
 $string['pluginname'] = 'WhatsApp-Generator';
 $string['privacy:metadata'] = 'Dieses Plugin speichert keine personenbezogenen Daten.';
 $string['addwhatsapp'] = 'WhatsApp-Nachricht hinzufügen';
