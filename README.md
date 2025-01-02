@@ -9,11 +9,8 @@ The following git branches are supported:
 
 | Moodle version        | Branch            |
 |-----------------------|-------------------|
-| Moodle 4.0            | MOODLE_400_STABLE |
-| Moodle 4.1            | MOODLE_401_STABLE |
-| Moodle 4.2            | MOODLE_402_STABLE |
-| Moodle 4.3            | MOODLE_403_STABLE |
-| Moodle 4.4            | MOODLE_404_STABLE |
+| Moodle 4.5            | MOODLE_405_STABLE |
+
 
 # PURPOSE
 

@@ -52,6 +52,7 @@ $string['placeholders'] = 'Overview of Placeholders';
 $string['phfirstname'] = '%%firstname%% &rarr; first name of the participant';
 $string['phlastname'] = '%%lastname%% &rarr; last name of the participant';
 $string['phemail'] = '%%email%% &rarr; email-address of the participant';
+$string['phgroups'] = '%%groupname%% &rarr; all the groups in this course where the participant is enrolled';
 $string['phfullname'] = '%%fullname%% &rarr; fullname of this course';
 $string['phshortname'] = '%%shortname%% &rarr; shortname of this course';
 $string['textformatting'] = 'Overview of Text Formatting';

@@ -51,6 +51,7 @@ $string['nonumber'] = 'There is no number available';
 $string['placeholders'] = 'Overview of Placeholders';
 $string['phfirstname'] = '%%firstname%% &rarr; first name of the participant';
 $string['phlastname'] = '%%lastname%% &rarr; last name of the participant';
+$string['phgroups'] = '%%groupname%% &rarr; all the groups in this course where the participant is enrolled';
 $string['phemail'] = '%%email%% &rarr; email-address of the participant';
 $string['phfullname'] = '%%fullname%% &rarr; fullname of this course';
 $string['phshortname'] = '%%shortname%% &rarr; shortname of this course';
