@@ -114,9 +114,16 @@ class whatsapp {
                                us.email AS email ,
                                us.country AS country 
                         FROM {user} us 
-                        WHERE us.id ' . $sql_condition ;  
+                        WHERE us.id ' . $sql_condition ;
+                
                 
                 $userdata = $DB->get_records_sql($sql, $sql_params_in);
+
+                $sqlgroups = 'SELECT gm.id , gm.userid , gm.groupid , g.name
+                                FROM {groups_members} gm
+                                JOIN {groups} g ON gm.groupid = g.id
+                                WHERE gm.userid ' . $sql_condition ;
+                $groups = $DB->get_records_sql($sqlgroups , $sql_params_in);
 
                 //Get setting Tracking in DB
                 $setting_dbtracking = '';
@@ -132,6 +139,7 @@ class whatsapp {
                 $country_codes = json_decode($json_content, true);
 
                 $collectDataforjs = [];
+                $collectDataforinsert = [];
                 
 
                 //Now render it all
@@ -140,7 +148,6 @@ class whatsapp {
                     //Get Text
                     $formattedText = $whatsapp_message;
 
-                    
                     // Replace placeholders
                     if (strpos($formattedText , '%%firstname%%') !== false) {
                         $formattedText = str_replace('%%firstname%%', $waaccount->firstname, $formattedText);
@@ -157,6 +164,16 @@ class whatsapp {
                     if (strpos($formattedText , '%%coursefullname%%') !== false) {
                         $coursefullname = $DB->get_record('course', ['id' => $courseid_fromform])->fullname;
                         $formattedText = str_replace('%%coursefullname%%', $coursefullname , $formattedText);
+                    }
+                    if (strpos($formattedText , '%%groupname%%') !== false) {
+                        $user_groups = [];
+                        foreach ($groups as $group) {
+                            if ($group->userid == $waaccount->id) {
+                            $user_groups[] = $group->name;
+                            }
+                        }
+                        $groupstring = implode (', ' , $user_groups);
+                        $formattedText = str_replace('%%groupname%%', $groupstring , $formattedText);
                     }
 
                     if (strpos($formattedText , '%%courseshortname%%') !== false) {
@@ -196,23 +213,25 @@ class whatsapp {
                             'phonenumber' => $phonenumber,
                             'text' => $formattedText
                         ];
-                        
-  
+
+                        $collectDataforinsert[] = [
+                            'useridfrom' => $messaginguser,
+                            'course' => $courseid_fromform ,
+                            'useridto' => $waaccount->id ,
+                            'message' => $formattedText ,
+                            'timecreated' => time()
+                        ];
                     }
-                    //Insert in generated WhatsApp messages
-                    if ($setting_dbtracking > 0) {
-                        $insert_tracking = new stdClass();
-                        $insert_tracking->useridfrom = $messaginguser;
-                        $insert_tracking->course = $courseid_fromform;
-                        $insert_tracking->useridto = $waaccount->id;
-                        $insert_tracking->message = $formattedText;
-                        $insert_tracking->timecreated = time();
-                        try {
-                            $DB->insert_record('whatsappgen_messages' , $insert_tracking , false);
-                        } catch (dml_exception $e) {
-                        }
+
+                }
+                //Insert in generated WhatsApp messages
+                if ($setting_dbtracking > 0) {
+                    try {
+                        $DB->insert_records('whatsappgen_messages', $collectDataforinsert);
+                    } catch (dml_exception $e) {
                     }
                 }
+
                 //Out of foreach -> I want to go to js and create the messages there
                 $PAGE->requires->js_call_amd("local_whatsappgen/create", 'init', [$collectDataforjs]);
                 $PAGE->requires->js_init_code('window.location.href = "' . $CFG->wwwroot . '/user/index.php?id=' . $courseid . '";');
@@ -228,6 +247,7 @@ class whatsapp {
                 'phfirstname' => get_string('phfirstname', 'local_whatsappgen'),
                 'phlastname' => get_string('phlastname', 'local_whatsappgen'),
                 'phemail' => get_string('phemail', 'local_whatsappgen'),
+                'phgroups' => get_string('phgroups', 'local_whatsappgen'),
                 'phfullname' => get_string('phfullname', 'local_whatsappgen'),
                 'phshortname' => get_string('phshortname', 'local_whatsappgen'),
                 'textformatting' => get_string('textformatting', 'local_whatsappgen'),
