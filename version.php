@@ -25,8 +25,8 @@
 defined('MOODLE_INTERNAL') || die;
 
 $plugin->component = 'local_whatsappgen';
-$plugin->version = 2025010203; // Current Version
+$plugin->version = 2025010307; // Current Version
 $plugin->requires = 2020112800; // Minim. Version
 $plugin->maturity = MATURITY_RC;
-$plugin->release = 'v1.101';
+$plugin->release = 'v1.107';
 
