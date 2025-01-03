@@ -185,7 +185,7 @@ class whatsapp {
                     $formattedText = str_replace("<br />", "\n", $formattedText);
                     
                     
-                    // Get Telephone or Smartphonenumber from settings
+                    // Get Telephone (phone1) or Smartphonenumber(phone2) from settings 
                     $phonenumerunformat = '';
                     if ($setting_defaultnumber === 'phone2') {
                         $phonenumerunformat = $waaccount->phone2;
@@ -205,15 +205,14 @@ class whatsapp {
                         }
                     }
                     
-                    //Proof, if user has nuumber and create message
+                    //Proof, if user has nuumber and create message, 
                     if (!empty($phonenumber)) {
-                        // Hier jetzt die create js mit den inits aufrufen
-                        
+                        // If yes, then prepare array for create.js to create the messagelink
                         $collectDataforjs[] = [
                             'phonenumber' => $phonenumber,
                             'text' => $formattedText
                         ];
-
+                        // If yes, then prepare array for for insert in the database
                         $collectDataforinsert[] = [
                             'useridfrom' => $messaginguser,
                             'course' => $courseid_fromform ,
@@ -224,7 +223,7 @@ class whatsapp {
                     }
 
                 }
-                //Insert in generated WhatsApp messages
+                // Out of foreach -> insert into the database if setting is on
                 if ($setting_dbtracking > 0) {
                     try {
                         $DB->insert_records('whatsappgen_messages', $collectDataforinsert);
