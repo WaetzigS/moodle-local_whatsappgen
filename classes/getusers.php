@@ -38,27 +38,32 @@ class getusers {
         //Get setting defaultnumber
         $setting_defaultnumber = get_config('local_whatsappgen' , 'defaultnumber');
 
+
         $userlist_array = explode(',', $userids);
         $userlist = $this->DB->get_records_list('user', 'id', $userlist_array);
 
+
+
         foreach ($userlist as $proofavail) {
             //Key avail ins array hinzufügen.
-            if ($setting_defaultnumber === 'phone2' && !empty($proofavail->phone2)) {
-                $proofavail->avail = 1;
-                $proofavail->fontcolor = 'green';
+            if (trim($setting_defaultnumber) === 'phone2' ) {
+                if ($proofavail->phone2 != '' && !empty($proofavail->phone2)) {
+                    $proofavail->avail = 1;
+                    $proofavail->fontcolor = 'green';
+                } else {
+                    $proofavail->avail = 0;
+                    $proofavail->fontcolor = 'red';
+                }
             } else {
-                $proofavail->avail = 0;
-                $proofavail->fontcolor = 'red';
-            }
-            if ($setting_defaultnumber === 'phone1' && !empty($proofavail->phone1)) {
-                $proofavail->avail = 1;
-                $proofavail->fontcolor = 'green';
-            } else {
-                $proofavail->avail = 0;
-                $proofavail->fontcolor = 'red';
+                if ($proofavail->phone1 != '' && !empty($proofavail->phone1)) {
+                    $proofavail->avail = 1;
+                    $proofavail->fontcolor = 'green';
+                } else {
+                    $proofavail->avail = 0;
+                    $proofavail->fontcolor = 'red';
+                }
             }
         }
-
         return ['userlist' => $userlist];
     }
 }
