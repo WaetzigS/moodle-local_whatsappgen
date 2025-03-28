@@ -82,7 +82,7 @@ class whatsapp {
             $usernameslist = $userlistclass->userlist($userids);
 
             //Get Data from user out of the function userlist and get the phonenumbers
-            $setting_defaultnumber =  get_config('local_whatsappgen' , 'ddefaultnumber');
+            $setting_defaultnumber =  get_config('local_whatsappgen' , 'defaultnumber');
 
             //Get the forms
             $mform = new whatsapp_message();

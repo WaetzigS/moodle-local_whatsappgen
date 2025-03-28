@@ -9,12 +9,15 @@ The following git branches are supported:
 
 | Moodle version        | Branch            |
 |-----------------------|-------------------|
-| Moodle 4.5            | MOODLE_405_STABLE |
-
+| Moodle 4.0            | MOODLE_400_STABLE |
+| Moodle 4.1            | MOODLE_401_STABLE |
+| Moodle 4.2            | MOODLE_402_STABLE |
+| Moodle 4.3            | MOODLE_403_STABLE |
+| Moodle 4.4            | MOODLE_404_STABLE |
 
 # PURPOSE
 
-For many participants and in situations where you need a fast reply from them, WhatsApp is more effective. With this plugin, you can create messages with placeholders, such as name, etc., and send them to the participants.
+For many participants and in situations where you need a fast reply from them, WhatsApp is more effective. With this plugin, you can create messages with placeholders, such as name, groups, etc., and send them to the participants.
 
 This plugin is not intended for sending bulk messages for non-educational or commercial purposes.
 
@@ -102,6 +105,11 @@ The translation was created by a chatbot. Please report it or send me the correc
 
 7. I found a bug. How I can report?
 Please report it on github https://github.com/WaetzigS 
+
+# Release Notes
+
+2025-03-28: Repair Variable of deaufaultnumber @josecebellan(https://github.com/josecebellan) Thank you
+2025-03-28: Repair function getuser for phone2
 
 # License
 
