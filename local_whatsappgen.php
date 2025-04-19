@@ -83,6 +83,7 @@ class whatsapp {
 
             //Get Data from user out of the function userlist and get the phonenumbers
             $setting_defaultnumber =  get_config('local_whatsappgen' , 'defaultnumber');
+            
 
             //Get the forms
             $mform = new whatsapp_message();
@@ -187,11 +188,16 @@ class whatsapp {
                     
                     // Get Telephone (phone1) or Smartphonenumber(phone2) from settings 
                     $phonenumerunformat = '';
+
+
+
                     if ($setting_defaultnumber === 'phone2') {
                         $phonenumerunformat = $waaccount->phone2;
                     } else {
                         $phonenumerunformat = $waaccount->phone1;
                     }
+
+
 
                     // Format the phone number (trim, remove special characters, use country code)
                     $phonenumber = preg_replace('/\D/', '', $phonenumerunformat);
@@ -204,6 +210,8 @@ class whatsapp {
                             }
                         }
                     }
+
+
                     
                     //Proof, if user has nuumber and create message, 
                     if (!empty($phonenumber)) {
