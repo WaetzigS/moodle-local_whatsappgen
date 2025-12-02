@@ -9,7 +9,7 @@ The following git branches are supported:
 
 | Moodle version        | Branch            |
 |-----------------------|-------------------|
-| Moodle 5.1            | MOODLE_501_STABLE |
+| Moodle 5.1            | MOODLE_51_STABLE |
 
 
 # PURPOSE
@@ -127,4 +127,5 @@ PARTICULAR PURPOSE.  See the GNU General Public License for more details.
 
 You should have received a copy of the GNU General Public License along with
 this program.  If not, see <https://www.gnu.org/licenses/>.
+
 
