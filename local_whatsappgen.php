@@ -83,6 +83,7 @@ class whatsapp {
 
             //Get Data from user out of the function userlist and get the phonenumbers
             $setting_defaultnumber =  get_config('local_whatsappgen' , 'defaultnumber');
+            
 
             //Get the forms
             $mform = new whatsapp_message();
@@ -187,11 +188,16 @@ class whatsapp {
                     
                     // Get Telephone (phone1) or Smartphonenumber(phone2) from settings 
                     $phonenumerunformat = '';
+
+
+
                     if ($setting_defaultnumber === 'phone2') {
                         $phonenumerunformat = $waaccount->phone2;
                     } else {
                         $phonenumerunformat = $waaccount->phone1;
                     }
+
+
 
                     // Format the phone number (trim, remove special characters, use country code)
                     $phonenumber = preg_replace('/\D/', '', $phonenumerunformat);
@@ -204,8 +210,10 @@ class whatsapp {
                             }
                         }
                     }
+
+
                     
-                    //Proof, if user has nuumber and create message, 
+                    //Proof, if user has number and create message, 
                     if (!empty($phonenumber)) {
                         // If yes, then prepare array for create.js to create the messagelink
                         $collectDataforjs[] = [
@@ -233,7 +241,7 @@ class whatsapp {
 
                 //Out of foreach -> I want to go to js and create the messages there
                 $PAGE->requires->js_call_amd("local_whatsappgen/create", 'init', [$collectDataforjs]);
-                $PAGE->requires->js_init_code('window.location.href = "' . $CFG->wwwroot . '/user/index.php?id=' . $courseid . '";');
+                //$PAGE->requires->js_init_code('window.location.href = "' . $CFG->wwwroot . '/user/index.php?id=' . $courseid . '";');
                 
             }
 
@@ -241,6 +249,7 @@ class whatsapp {
             $templatecontext = (object)[
                 'userlist' => array_values($usernameslist['userlist']),
                 'whatsapp_inputform' => $mform->render(),
+                'courseid_inputform' => $courseid,
                 'labelselect' => get_string('labelselect', 'local_whatsappgen'),
                 'placeholders' => get_string('placeholders', 'local_whatsappgen'),
                 'phfirstname' => get_string('phfirstname', 'local_whatsappgen'),
@@ -254,9 +263,8 @@ class whatsapp {
                 'tfitalic' => get_string('tfitalic', 'local_whatsappgen'),
                 'tfstrikethrough' => get_string('tfstrikethrough', 'local_whatsappgen'),
                 'tfmonospace' => get_string('tfmonospace', 'local_whatsappgen'),
-                'header' => get_string('create_message', 'local_whatsappgen')
-
-
+                'header' => get_string('create_message', 'local_whatsappgen') ,
+                'backtocourse' => get_string('backtocourse', 'local_whatsappgen')
             ];
             $content = new stdClass;
             $content->text = $OUTPUT->render_from_template('local_whatsappgen/whatsapp', $templatecontext);

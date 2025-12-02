@@ -60,5 +60,6 @@ $string['tfbolt'] = '*テキスト* &rarr; 太字: ';
 $string['tfitalic'] = '_テキスト_ &rarr; 斜体: ';
 $string['tfstrikethrough'] = '~テキスト~ &rarr; 打消し: ';
 $string['tfmonospace'] = '```テキスト``` &rarr; モノスペースフォーマット: ';
+$string['backtocourse'] = '参加者リストに戻る';
 $string['licenceinfo'] = '条件';
 $string['licenceinfodescription'] = 'このプラグインの作成者は、いかなる法的侵害にも責任を負わないことを理解しています。WhatsAppのライセンス条件を遵守してください。<br>WhatsAppの<a href="https://www.whatsapp.com/legal" target="_blank">法的条件</a>を確認してください';

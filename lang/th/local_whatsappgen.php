@@ -60,5 +60,6 @@ $string['tfbolt'] = '*ข้อความ* &rarr; หนา: ';
 $string['tfitalic'] = '_ข้อความ_ &rarr; เอียง: ';
 $string['tfstrikethrough'] = '~ข้อความ~ &rarr; ขีดทับ: ';
 $string['tfmonospace'] = '```ข้อความ``` &rarr; รูปแบบ monospace: ';
+$string['backtocourse'] = 'กลับไปยังรายการผู้เข้าร่วม';
 $string['licenceinfo'] = 'เงื่อนไข';
 $string['licenceinfodescription'] = 'ผมเข้าใจว่าผู้เขียนปลั๊กอินนี้ไม่รับผิดชอบต่อการละเมิดกฎหมายใด ๆ กรุณาปฏิบัติตามเงื่อนไขการให้บริการของ WhatsApp.<br>กรุณาตรวจสอบ <a href="https://www.whatsapp.com/legal" target="_blank">เงื่อนไขทางกฎหมายของ WhatsApp</a>';

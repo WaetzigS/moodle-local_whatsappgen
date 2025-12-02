@@ -60,5 +60,6 @@ $string['tfbolt'] = '*Текст* &rarr; жирний: ';
 $string['tfitalic'] = '_Текст_ &rarr; курсив: ';
 $string['tfstrikethrough'] = '~Текст~ &rarr; перекреслений: ';
 $string['tfmonospace'] = '```Текст``` &rarr; формат з однаковим інтервалом: ';
+$string['backtocourse'] = 'Назад до списку учасників';
 $string['licenceinfo'] = 'Умови';
 $string['licenceinfodescription'] = 'Я розумію, що автор цього плагіна не несе відповідальності за будь-які правопорушення. Будь ласка, дотримуйтесь умов ліцензії WhatsApp.<br>Будь ласка, перевірте <a href="https://www.whatsapp.com/legal" target="_blank">правові умови WhatsApp</a>';

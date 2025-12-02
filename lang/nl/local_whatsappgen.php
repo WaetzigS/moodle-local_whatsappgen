@@ -60,6 +60,7 @@ $string['tfbolt'] = '*Tekst* &rarr; vetgedrukt: ';
 $string['tfitalic'] = '_Tekst_ &rarr; cursief: ';
 $string['tfstrikethrough'] = '~Tekst~ &rarr; doorgehaald: ';
 $string['tfmonospace'] = '```Tekst``` &rarr; monospace-opmaak: ';
+$string['backtocourse'] = 'Terug naar de deelnemerslijst';
 $string['licenceinfo'] = 'Voorwaarden';
 $string['licenceinfodescription'] = 'Ik begrijp dat de auteur van deze plugin geen verantwoordelijkheid aanvaardt voor enige juridische overtredingen. Houd u aan de licentievoorwaarden van WhatsApp.<br>Bekijk de <a href="https://www.whatsapp.com/legal" target="_blank">juridische voorwaarden van WhatsApp</a>';
 

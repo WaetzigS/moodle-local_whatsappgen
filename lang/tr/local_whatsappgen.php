@@ -60,5 +60,6 @@ $string['tfbolt'] = '*Metin* &rarr; kalın: ';
 $string['tfitalic'] = '_Metin_ &rarr; italik: ';
 $string['tfstrikethrough'] = '~Metin~ &rarr; üstü çizili: ';
 $string['tfmonospace'] = '```Metin``` &rarr; tek aralıklı biçim: ';
+$string['backtocourse'] = 'Katılımcılar listesine geri dön';
 $string['licenceinfo'] = 'Şartlar';
 $string['licenceinfodescription'] = 'Bu eklentinin yazarının herhangi bir yasal ihlalden sorumlu olmadığını anlıyorum. Lütfen WhatsApp lisans şartlarına uyun.<br>Lütfen <a href="https://www.whatsapp.com/legal" target="_blank">WhatsApp\'ın yasal şartlarını</a> kontrol edin';

@@ -1,65 +1,51 @@
-<table width="100%">
-    <tbody>
-        <tr>
-            <td width="75%">
-                <h4>{{{header}}}</h4>
-            </td>
-            <td width="25%">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/5/5e/WhatsApp_icon.png" align="right" width="75px" height="75px">
-            </td>
-        </tr>
-    </tbody>
-</table>
-<br>
-<table width="100%">
-    <tbody>
-        <tr>
-            <td width="60%" valign="top">
-                <p>{{{whatsapp_inputform}}}</p>
-            </td>
-            <td width="10%">
-            </td>
-            <td width="30%" valign="top">
-                {{{labelselect}}}
-                <ul>
-                    {{#userlist}}
-                         <li style="color: {{{fontcolor}}}">{{{firstname}}} {{{lastname}}} </li>
-                    {{/userlist}}
-                </ul>
-            </td>
-        </tr>
-    </tbody>
-</table>
-<br>
-<br>
+<div style="display: flex; width: 100%; align-items: center; margin-bottom: 1rem;">
+    <div style="flex: 3;">
+        <h4>{{{header}}}</h4>
+    </div>
+    <div style="flex: 1; text-align: right;">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/5/5e/WhatsApp_icon.png" width="75" height="75" alt="WhatsApp Icon">
+    </div>
+</div>
 
-<table width="100%">
-    <tbody>
-        <tr>
-            <td with="49%" valign="top">
-                <h5>{{{placeholders}}}</h5>
-                <ul class="flex-fill description-inner">
-                    <li>{{{phfirstname}}}</li>
-                    <li>{{{phlastname}}}</li>
-                    <li>{{{phemail}}}</li>
-                    <li>{{{phgroups}}}</li>
-                    <li>{{{phfullname}}}</li>
-                    <li>{{{phshortname}}}</li>
-                </ul>
-            </td>
-            <td with="2%">
-            </td>
-            <td with="49%" valign="top">
-                <h5>{{{textformatting}}}</h5>
-                <ul class="flex-fill description-inner">
-                    <li>{{{tfbolt}}} <b>Text</b></li>
-                    <li>{{{tfitalic}}} <i>Text</i></li>
-                    <li>{{{tfstrikethrough}}} <s>Text</s></li>
-                    <li>{{{tfmonospace}}} <code>Text</code></li>
-                </ul>
-            </td>
-        </tr>
-    </tbody>
-</table>
-
-
+<div style="display: flex; width: 100%; margin-bottom: 1rem;">
+    <div style="flex: 6; padding-right: 1rem;">
+        <p>{{{whatsapp_inputform}}}</p>
+    </div>
+    <div style="flex: 1;">
+    </div>
+    <div style="flex: 3;">
+        {{{labelselect}}}
+        <ul>
+            {{#userlist}}
+                <li style="color: {{{fontcolor}}}">{{{firstname}}} {{{lastname}}}</li>
+            {{/userlist}}
+        </ul>
+    </div>
+</div>
+<div>
+<a href="http://localhost/moodle503/user/index.php?id={{{courseid_inputform}}}">{{{backtocourse}}}</a>
+</div>
+<div style="display: flex; width: 100%; margin-top: 2rem;">
+    <div style="flex: 1; padding-right: 1rem;">
+        <h5>{{{placeholders}}}</h5>
+        <ul class="flex-fill description-inner">
+            <li><small>{{{phfirstname}}}</small></li>
+            <li><small>{{{phlastname}}}</small></li>
+            <li><small>{{{phemail}}}</small></li>
+            <li><small>{{{phgroups}}}</small></li>
+            <li><small>{{{phfullname}}}</small></li>
+            <li><small>{{{phshortname}}}</small></li>
+        </ul>
+    </div>
+    <div style="flex: 0.05;">
+    </div>
+    <div style="flex: 1; padding-left: 1rem;">
+        <h5>{{{textformatting}}}</h5>
+        <ul class="flex-fill description-inner">
+            <li><small>{{{tfbolt}}} <b>Text</b></small></li>
+            <li><small>{{{tfitalic}}} <i>Text</i></small></li>
+            <li><small>{{{tfstrikethrough}}} <s>Text</s></small></li>
+            <li><small>{{{tfmonospace}}} <code>Text</code></small></li>
+        </ul>
+    </div>
+</div>

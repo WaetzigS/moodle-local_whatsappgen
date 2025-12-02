@@ -9,7 +9,7 @@ The following git branches are supported:
 
 | Moodle version        | Branch            |
 |-----------------------|-------------------|
-| Moodle 5.0            | MOODLE_500_STABLE |
+| Moodle 5.1            | MOODLE_501_STABLE |
 
 
 # PURPOSE
@@ -53,7 +53,7 @@ to complete the installation from the command line.
 
 2. Check the boxes next to the students for whom you want to generate a WhatsApp message.
 
-3. A symbol with the WhatsApp logo will then appear. A click / tab will redirect you to the message generator
+3. A symbol with the WhatsApp logo will then appear. A click / tab will redirect you to the message generator. 
 ![Redirect](pix/redirect.png)
 
 4. Type your WhatsApp message in the textarea. Below the textarea, you will see the standard placeholders. For example, use %%firstname%% to insert each participant's first name. You'll also find special formats for WhatsApp, allowing you to format text in bold, italics, etc. Also you see a list for which participants the message will generated. On the right side of the page, you can see which participants, marked in green font, you can create the message for.
@@ -105,6 +105,10 @@ Please report it on github https://github.com/WaetzigS
 
 # Release Notes
 
+2025-12-02: Adjust whatsapp.mustache for moodle 5
+2025-12-02: Remove automatically relocation to participants list. It is intended to ensure that all WhatsApp messages can be generated. (https://github.com/WaetzigS/moodle-local_whatsappgen/issues/28)
+2025-12-02: Change trigger-class from extend_settings_navigation to before_footer. To get more stability to the execution of JavaScript.  (https://github.com/WaetzigS/moodle-local_whatsappgen/issues/27)
+2025-12-02: Remove lib.php and add moodle 5.1 confirm callbacks
 2025-03-28: Repair Variable of deaufaultnumber @josecebellan(https://github.com/josecebellan) Thank you
 2025-03-28: Repair function getuser for phone2
 

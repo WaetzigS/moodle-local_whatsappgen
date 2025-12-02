@@ -60,6 +60,7 @@ $string['tfbolt'] = '*טקסט* &rarr; מודגש: ';
 $string['tfitalic'] = '_טקסט_ &rarr; נטוי: ';
 $string['tfstrikethrough'] = '~טקסט~ &rarr; מחוק: ';
 $string['tfmonospace'] = '```טקסט``` &rarr; תצורת רווחים קבועה: ';
+$string['backtocourse'] = 'חזרה לרשימת המשתתפים';
 $string['licenceinfo'] = 'תנאים';
 $string['licenceinfodescription'] = 'אני מבין כי מחבר התוסף הזה אינו נושא באחריות כלשהי להפרות חוקיות. אנא שמרו על תנאי הרישוי של WhatsApp.<br>אנא בדוק את <a href="https://www.whatsapp.com/legal" target="_blank">התנאים המשפטיים של WhatsApp</a>';
 

@@ -31,10 +31,10 @@ require_once("$CFG->libdir/formslib.php");
 
 
 
-class whatsapp_message extends moodleform {
+class whatsapp_message extends \moodleform {
 
 
-    
+
     // Add elements to form.
     public function definition() {
         global $DB;
@@ -64,7 +64,8 @@ class whatsapp_message extends moodleform {
         $mform->setType('whatsapp_messagetext', PARAM_RAW);
         // Default value.
         $buttons = [];
-        $this->add_action_buttons(true, get_string('whatsapp_messagetext_buttons', 'local_whatsappgen') , $buttons);
+        $this->add_action_buttons( false, get_string('whatsapp_messagetext_buttons', 'local_whatsappgen')  , $buttons);
+
     }
 
     // Custom validation should be added here.

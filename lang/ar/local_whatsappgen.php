@@ -60,5 +60,6 @@ $string['tfbolt'] = '*النص* &rarr; عريض: ';
 $string['tfitalic'] = '_النص_ &rarr; مائل: ';
 $string['tfstrikethrough'] = '~النص~ &rarr; مشطوب: ';
 $string['tfmonospace'] = '```النص``` &rarr; صيغة الحروف المتباعدة: ';
+$string['backtocourse'] = 'العودة إلى قائمة المشاركين';
 $string['licenceinfo'] = 'الشروط';
 $string['licenceinfodescription'] = 'أفهم أن مؤلف هذه الإضافة لا يتحمل أي مسؤولية عن أي انتهاكات قانونية. يرجى الالتزام بشروط ترخيص واتساب.<br>يرجى مراجعة <a href="https://www.whatsapp.com/legal" target="_blank">الشروط القانونية لواتساب</a>';

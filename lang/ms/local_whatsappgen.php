@@ -60,5 +60,6 @@ $string['tfbolt'] = '*Teks* &rarr; tebal: ';
 $string['tfitalic'] = '_Teks_ &rarr; italic: ';
 $string['tfstrikethrough'] = '~Teks~ &rarr; coret: ';
 $string['tfmonospace'] = '```Teks``` &rarr; format monospace: ';
+$string['backtocourse'] = 'Kembali ke senarai peserta';
 $string['licenceinfo'] = 'Syarat-syarat';
 $string['licenceinfodescription'] = 'Saya faham bahawa penulis plugin ini tidak bertanggungjawab atas sebarang pelanggaran undang-undang. Sila patuhi syarat pelesenan WhatsApp.<br>Sila semak <a href="https://www.whatsapp.com/legal" target="_blank">syarat undang-undang WhatsApp</a>';

@@ -60,6 +60,7 @@ $string['tfbolt'] = '*Tekst* &rarr; fed skrift: ';
 $string['tfitalic'] = '_Tekst_ &rarr; kursiv: ';
 $string['tfstrikethrough'] = '~Tekst~ &rarr; gennemstreget: ';
 $string['tfmonospace'] = '```Tekst``` &rarr; monospace-format: ';
+$string['backtocourse'] = 'Tilbage til deltagerlisten';
 $string['licenceinfo'] = 'Betingelser';
 $string['licenceinfodescription'] = 'Jeg forstår, at forfatteren af dette plugin ikke påtager sig noget ansvar for juridiske overtrædelser. Overhold venligst WhatsApp\'s licensbetingelser.<br>Se venligst <a href="https://www.whatsapp.com/legal" target="_blank">WhatsApps juridiske betingelser</a>';
 

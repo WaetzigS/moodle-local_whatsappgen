@@ -60,5 +60,6 @@ $string['tfbolt'] = '*Texti* &rarr; feitletraður: ';
 $string['tfitalic'] = '_Texti_ &rarr; skáletraður: ';
 $string['tfstrikethrough'] = '~Texti~ &rarr; yfirstrikaður: ';
 $string['tfmonospace'] = '```Texti``` &rarr; fastbilform: ';
+$string['backtocourse'] = 'Aftur í þátttakendalista';
 $string['licenceinfo'] = 'Skilmálar';
 $string['licenceinfodescription'] = 'Ég skil að höfundur þessarar viðbótar ber enga ábyrgð á neinum lögbrotum. Vinsamlegast fylgdu skilmálum WhatsApp leyfis.<br>Vinsamlegast skoðaðu <a href="https://www.whatsapp.com/legal" target="_blank">löglegu skilmála WhatsApp</a>';

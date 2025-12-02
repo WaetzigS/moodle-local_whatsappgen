@@ -34,6 +34,7 @@ $string['addwhatsapp'] = 'WhatsApp-Nachricht hinzufügen';
 $string['error'] = 'Schwerwiegender Fehler im WhatsApp-Generator. Bitte kontaktieren Sie den Administratoren / Support';
 $string['whatsapp_messagetext'] = 'Ihr Nachrichtentext';
 $string['whatsapp_messagetext_buttons'] = 'Generieren';
+$string['whatsapp_messagetext_cancel'] = 'Zurück';
 $string['create_message'] = 'Neue Nachricht erstellen';
 $string['messagetext'] = 'Ihre WhatsApp-Nachricht';
 $string['limituser'] = 'Maximal gleichzeitig generierte Nachrichten';
@@ -60,6 +61,7 @@ $string['tfbolt'] = '*Text* &rarr; fett: ';
 $string['tfitalic'] = '_Text_ &rarr; kursiv: ';
 $string['tfstrikethrough'] = '~Text~ &rarr; durchgestrichen: ';
 $string['tfmonospace'] = '```Text``` &rarr; Monospace-Format: ';
+$string['backtocourse'] = 'Zurück zur Teilnehmendenliste';
 $string['licenceinfo'] = 'Bedingungen';
 $string['licenceinfodescription'] = 'Ich verstehe, dass der Autor dieses Plugins keine Verantwortung für rechtliche Verstöße übernimmt. Bitte beachten Sie die Lizenzbedingungen von WhatsApp.<br>Bitte prüfen Sie die <a href="https://www.whatsapp.com/legal" target="_blank">rechtlichen Bedingungen von WhatsApp</a>';
 

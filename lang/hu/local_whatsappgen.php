@@ -60,5 +60,6 @@ $string['tfbolt'] = '*Szöveg* &rarr; félkövér: ';
 $string['tfitalic'] = '_Szöveg_ &rarr; dőlt: ';
 $string['tfstrikethrough'] = '~Szöveg~ &rarr; áthúzott: ';
 $string['tfmonospace'] = '```Szöveg``` &rarr; monospace formátum: ';
+$string['backtocourse'] = 'Vissza a résztvevők listájához';
 $string['licenceinfo'] = 'Feltételek';
 $string['licenceinfodescription'] = 'Megértem, hogy a plugin szerzője nem vállal felelősséget a jogsértésekért. Kérjük, tartsa be a WhatsApp licencfeltételeit.<br>Kérjük, olvassa el a <a href="https://www.whatsapp.com/legal" target="_blank">WhatsApp jogi feltételeit</a>';

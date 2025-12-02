@@ -1,4 +1,5 @@
 <?php
+
 // This file is part of Moodle - http://moodle.org/
 //
 // Moodle is free software: you can redistribute it and/or modify
@@ -15,17 +16,18 @@
 // along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
 
 /**
- * Whatsapp message generator plugin version info
+ *  WhatsApp Message Generator
  *
  * @package    local_whatsappgen
- * @copyright  Stephan Waetzig
+ * @copyright  2024 Stephan Waetzig
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
-defined('MOODLE_INTERNAL') || die;
+defined('MOODLE_INTERNAL') || die();
 
-$plugin->component = 'local_whatsappgen';
-$plugin->version = 2025120222; // Current Version
-$plugin->requires = 2025100600; // Minim. Version
-$plugin->maturity = MATURITY_RC;
-$plugin->release = 'v1.113';
+$callbacks = [
+    [
+        'hook'     => \core\hook\output\before_footer_html_generation::class,
+        'callback' => '\local_whatsappgen\hook_callbacks::before_footer'
+    ]
+];

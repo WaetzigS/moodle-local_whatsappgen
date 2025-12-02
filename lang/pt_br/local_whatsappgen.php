@@ -60,5 +60,6 @@ $string['tfbolt'] = '*Texto* &rarr; negrito: ';
 $string['tfitalic'] = '_Texto_ &rarr; itálico: ';
 $string['tfstrikethrough'] = '~Texto~ &rarr; riscado: ';
 $string['tfmonospace'] = '```Texto``` &rarr; formato monoespaço: ';
+$string['backtocourse'] = 'Voltar à lista de participantes';
 $string['licenceinfo'] = 'Condições';
 $string['licenceinfodescription'] = 'Eu entendo que o autor deste plugin não assume qualquer responsabilidade por infrações legais. Por favor, siga os termos de licenciamento do WhatsApp.<br>Por favor, verifique os <a href="https://www.whatsapp.com/legal" target="_blank">termos legais do WhatsApp</a>';

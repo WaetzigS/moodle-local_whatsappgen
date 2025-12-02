@@ -60,5 +60,6 @@ $string['tfbolt'] = '*文本* &rarr; 粗体: ';
 $string['tfitalic'] = '_文本_ &rarr; 斜体: ';
 $string['tfstrikethrough'] = '~文本~ &rarr; 删除线: ';
 $string['tfmonospace'] = '```文本``` &rarr; 等宽字体格式: ';
+$string['backtocourse'] = '返回参与者列表';
 $string['licenceinfo'] = '条款';
 $string['licenceinfodescription'] = '我明白此插件的作者不对任何法律违规行为负责。请遵守 WhatsApp 的许可条款。<br>请查看 <a href="https://www.whatsapp.com/legal" target="_blank">WhatsApp 的法律条款</a>';

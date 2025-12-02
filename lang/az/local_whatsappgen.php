@@ -59,6 +59,7 @@ $string['tfbolt'] = '*Mətn* &rarr; qalın: ';
 $string['tfitalic'] = '_Mətn_ &rarr; italic: ';
 $string['tfstrikethrough'] = '~Mətn~ &rarr; üstündən xətt çəkilmiş: ';
 $string['tfmonospace'] = '```Mətn``` &rarr; monospace formatı: ';
+$string['backtocourse'] = 'İştirakçılar siyahısına geri qayıt';
 $string['licenceinfo'] = 'Şərtlər';
 $string['licenceinfodescription'] = 'Bu plagin müəllifinin hər hansı hüquqi pozuntuya görə məsuliyyət daşımadığını başa düşürəm. Zəhmət olmasa, WhatsApp lisenziya şərtlərinə riayət edin.<br>Zəhmət olmasa <a href="https://www.whatsapp.com/legal" target="_blank">WhatsApp hüquqi şərtlərini</a> yoxlayın';
 
